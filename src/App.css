@@ -36,3 +36,70 @@
     transform: rotate(360deg);
   }
 }
+
+#firstParagraph{
+  margin-left: 5%;
+}
+#opisMnie{
+  font-size: 1em;
+}
+.ui.grid {
+  padding-top: 150px!important;
+}
+.ui.header {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+h1{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.ui.image{
+  width: 100%;
+}
+#photo_column{
+  display: block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  width: 30%!important;
+}
+
+#tytul{
+  font-size: 5vw;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+#pod_tytul{
+  font-size: 2vw;
+  color: #48505f;
+  margin-top: 0px;
+}
+#divider_one{
+  padding-top: 90px;
+}
+#test{
+  padding-right: 0px;
+  padding-lef: 0px;
+}
+@media (max-width: 767px) {
+  #photo_column{
+    width: 60%!important;
+  }
+  #tytul{
+    font-size: 4em;
+    margin-bottom: 0px;
+  }
+  #pod_tytul{
+    font-size: 2em;
+    color: #48505f;
+    margin-top: 0px;
+  }
+  #opisMnie{
+    font-size: 1em;
+
+  }
+}
+#root{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
