@@ -15,7 +15,7 @@ export default function PorftolioComponent() {
                 <p id="opisMnie">Jestem studentem Uniwesytetu Gdańskiego, szukam stażu programistycznego .Net<br/>
                 Obecnie rozwijam się w tym kierunku pisania kodu dobrej jakości.<br/>
                 Ponizej opisałem projektu w których dotychczas brałem udział</p>
-                <Button>Sprawdź moje projekty</Button>
+                <Button className="button-portfolio">Sprawdź moje projekty</Button>
                 </Container>
             </GridColumn>
             <GridColumn centered id="photo_column">

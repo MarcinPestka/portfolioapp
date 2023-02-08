@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -114,6 +115,9 @@ h1{
     font-size: 1em;
 
   }
+  .button-portfolio{
+    margin-left: 0px!important;
+  }
 }
 
 #custom-sticky{
@@ -160,3 +164,44 @@ body{
   color: inherit;
   width: 320px!important;
 }
+
+.pattern{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcfcff;
+  opacity: 0.2;
+  background-image: radial-gradient(#3d84ff 2px, #fcfcff 2px);
+  background-size: 40px 40px;
+}
+
+
+.ui.button.button-portfolio{
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 20px 39px;
+  border: solid #000000 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 12px;
+  transition : 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  text-transform: lowercase;
+  margin-left: none;
+  margin-left: 7vw;
+  margin-right: auto;
+  }
+  .ui.button.button-portfolio:hover{
+  transition : 1000ms!important;
+  padding: 15px 50px!important;
+  transform : translateY(-0px)!important;
+  background-color: #fff!important;
+  color: #0066cc!important;
+  border: solid 2px #0066cc!important;
+  }

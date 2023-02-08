@@ -9,7 +9,7 @@ export default function StickyIcons() {
       <List>
         <List.Item>
         <Menu.Item
-        href="https://github.com"
+        href="https://github.com/MarcinPestka"
         position="right"
         target="_blank"
         id="item-href"
@@ -19,7 +19,7 @@ export default function StickyIcons() {
         </List.Item>
         <List.Item>
         <Menu.Item
-        href="https://linkedin.com"
+        href="https://linkedin.com/in/MarcinPestka"
         position="right"
         target="_blank"
         id="item-href"

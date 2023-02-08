@@ -19,23 +19,26 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <StickyIcons></StickyIcons>
-      <NavBarCustom handleClickProjekty={handleClickProjekty}></NavBarCustom>
-      <div className="Contents">
-      <PorftolioComponent></PorftolioComponent>
-      <Container textAlign='left'>
-      <Header className='numbered' as='h1'>Moje niektóre projekty</Header>
-      </Container>
-      <div ref={refProjekty}>
-      <FirstProject></FirstProject>
-      <SecondProject></SecondProject>
-      </div>
-      <Header className='numbered' as='h1'>Moje wszystkie projekty</Header>
-      <Container>
-      <AllProjects></AllProjects>
-      </Container>
-      </div>
+    <div className='App'>
+    <div className="pattern">
+    </div>
+
+<StickyIcons></StickyIcons>
+<NavBarCustom handleClickProjekty={handleClickProjekty}></NavBarCustom>
+<div className="Contents">
+<PorftolioComponent></PorftolioComponent>
+<Container textAlign='left'>
+<Header className='numbered' as='h1'>Moje niektóre projekty</Header>
+</Container>
+<div ref={refProjekty}>
+<FirstProject></FirstProject>
+<SecondProject></SecondProject>
+</div>
+<Header className='numbered' as='h1'>Moje wszystkie projekty</Header>
+<Container>
+<AllProjects></AllProjects>
+</Container>
+</div>
     </div>
   );
 }
