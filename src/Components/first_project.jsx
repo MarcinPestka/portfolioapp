@@ -1,7 +1,7 @@
 import React from "react";
 import { Tab, Grid, GridColumn, Image,Header, Container } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import code from "../Resources/Zrzut ekranu 2023-02-8 o 17.17.51.png";
+import code from "../Resources/placeHolderCode.png";
 
 const panes = [
     { menuItem: 'Technologie', render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem WinForms.
