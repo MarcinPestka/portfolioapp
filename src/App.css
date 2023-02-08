@@ -115,13 +115,27 @@ h1{
 
   }
 }
-#root{
-  margin-left: 5vw;
-  margin-right: 5vw;
-}
 
-.ui.sticky{
+#custom-sticky{
   position: fixed!important;
-  bottom: 0px;
+  bottom: 0px!important;
+  width: 40px!important;
   margin-left: 20px;
+}
+#item-href{
+  text-decoration: none;
+  color: inherit;
+}
+#custom-sticky::after{
+  content: "";
+display: block;
+width: 1px;
+height: 90px;
+margin-top: 0px;
+margin-right: auto;
+margin-left: auto;
+background-color: black;
+}
+.ui.list.item{
+  margin-bottom: 30px;
 }
