@@ -1,13 +1,13 @@
 import React from "react";
-import { Tab, Grid, GridColumn, Image,Header, Container } from 'semantic-ui-react';
+import { Tab, Grid, GridColumn, Image,Header, Container, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import code from "../Resources/placeHolderCode.png";
 
 const panes = [
-    { menuItem: 'Technologie', render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem WinForms.
+    { menuItem: "Technologie", render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem WinForms.
          Zalezało mi na szybkości działania oraz bezpieczeństwie danych. </Tab.Pane> },
     { menuItem: 'Wyzwania', render: () => <Tab.Pane>Musiałem sam od zera zająć się analizą procesu, znalezieniem moliwych optymalizacji 
-        oraz stale dodawać nowe featury.
+        oraz stale dodawać nowe 
     </Tab.Pane> },
     { menuItem: 'Benefity', render: () => <Tab.Pane>Tak jak pisałem wyzej benefity z wdrozenia nardzędzia są oblzymie, a praca dzięki 
         temu idzie znacznie lepiej.</Tab.Pane> },

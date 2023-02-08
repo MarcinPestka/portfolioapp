@@ -4,12 +4,12 @@ import 'semantic-ui-css/semantic.min.css';
 import code from "../Resources/ztm.png";
 
 const panes = [
-    { menuItem: 'Technologie', render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem Reacta oraz .net.
+    { menuItem: {icon: 'file code', content: 'Technologie' }, render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem Reacta oraz .net.
          .net api działa jako pośrednik który przyjmuje otwarte dane ztm gdańsk i przekształca je w łatwiejsze do analizowania . </Tab.Pane> },
-    { menuItem: 'Wyzwania', render: () => <Tab.Pane>Otwarte dane ZTM Gdańsk nie są najlepszej jakości, dokumentacji w zasadzie nie ma i 
+    { menuItem: {icon: 'lock', content: 'Wyzwania' }, render: () => <Tab.Pane>Otwarte dane ZTM Gdańsk nie są najlepszej jakości, dokumentacji w zasadzie nie ma i 
         momentami wątpiłem czy projekt ma sens.
     </Tab.Pane> },
-    { menuItem: 'Benefity', render: () => <Tab.Pane>Dojazd do pracy jest bardzo ułatwiony,a ja nie musze martwić się spóźnieniami.</Tab.Pane> },
+    { menuItem: {icon: 'dollar', content: 'Benefity' }, render: () => <Tab.Pane>Dojazd do pracy jest bardzo ułatwiony,a ja nie musze martwić się spóźnieniami.</Tab.Pane> },
   ]
 
 export default function SecondProject() {

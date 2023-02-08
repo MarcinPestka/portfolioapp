@@ -36,7 +36,23 @@
     transform: rotate(360deg);
   }
 }
-
+.nav-link{
+  margin-left: 5vw;
+}
+.navbar-brand{
+  margin-left: 5vw;
+}
+.container-fluid{
+  margin-top: 1vw;
+  padding-bottom: 1vw;
+}
+.d-flex{
+  margin-right: 2vw;
+}
+.Contents{
+ margin-left: 5vw;
+ margin-right: 5vw;
+}
 #firstParagraph{
   margin-left: 5%;
 }
@@ -79,7 +95,7 @@ h1{
 }
 #test{
   padding-right: 0px;
-  padding-lef: 0px;
+  padding-left: 0px;
 }
 @media (max-width: 767px) {
   #photo_column{
@@ -102,4 +118,10 @@ h1{
 #root{
   margin-left: 5vw;
   margin-right: 5vw;
+}
+
+.ui.sticky{
+  position: fixed!important;
+  bottom: 0px;
+  margin-left: 20px;
 }
