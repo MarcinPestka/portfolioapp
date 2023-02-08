@@ -60,7 +60,7 @@
   font-size: 1em;
 }
 .ui.grid {
-  padding-top: 150px!important;
+  padding-top: 70px!important;
 }
 .ui.header {
   margin-top: 0px;
@@ -136,6 +136,27 @@ margin-right: auto;
 margin-left: auto;
 background-color: black;
 }
-.ui.list.item{
+div.item{
   margin-bottom: 30px;
+}
+body{
+  counter-reset: section;
+}
+.projectSection{
+  display: block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  width: 80%!important;
+}
+.ui.header.numbered{
+  padding-top: 100px;
+}
+.ui.header.numbered:before{
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+.ui.card{
+  text-decoration: none;
+  color: inherit;
+  width: 320px!important;
 }

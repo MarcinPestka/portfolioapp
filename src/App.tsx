@@ -6,26 +6,35 @@ import SecondProject from './Components/second_project';
 import AllProjects from './Components/all_Projects';
 import NavBarCustom from './Components/navbar';
 import StickyIcons from './Components/stickyIcons';
+import { Container, Header } from 'semantic-ui-react';
 
 
 function App() {
-  const ref = useRef<null | HTMLDivElement>(null);
-  const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-    console.log("test");
+  const refProjekty = useRef<null | HTMLDivElement>(null);
+  const ref2 = useRef<null | HTMLDivElement>(null);
+  const ref3 = useRef<null | HTMLDivElement>(null);
+
+  const handleClickProjekty = () => {
+    refProjekty.current?.scrollIntoView({behavior: 'smooth'});
   }
 
   return (
     <div className="App">
       <StickyIcons></StickyIcons>
-      <NavBarCustom handleClick={handleClick}></NavBarCustom>
+      <NavBarCustom handleClickProjekty={handleClickProjekty}></NavBarCustom>
       <div className="Contents">
       <PorftolioComponent></PorftolioComponent>
+      <Container textAlign='left'>
+      <Header className='numbered' as='h1'>Moje niektóre projekty</Header>
+      </Container>
+      <div ref={refProjekty}>
       <FirstProject></FirstProject>
-      <div ref={ref}>
       <SecondProject></SecondProject>
       </div>
+      <Header className='numbered' as='h1'>Moje wszystkie projekty</Header>
+      <Container>
       <AllProjects></AllProjects>
+      </Container>
       </div>
     </div>
   );

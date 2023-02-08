@@ -14,6 +14,8 @@ const panes = [
 
 export default function SecondProject() {
     return(
+        <div className="projectSection">
+
         <Grid stackable verticalAlign='middle' columns={2}>
             <GridColumn textAlign="right">
             <Container>
@@ -26,9 +28,10 @@ export default function SecondProject() {
                 <Tab panes={panes} />
                 </Container>
             </GridColumn>
-            <GridColumn centered id="photo_column">
+            <GridColumn centered id="">
                 <Image src={code} size='large' rounded id="test" />
             </GridColumn>
         </Grid>
+        </div>
     )
 }

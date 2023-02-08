@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pdf from "../Resources/Pestka_Marcin_CV.pdf";
 
-export default function NavBarCustom({handleClick}) {
+export default function NavBarCustom({handleClickProjekty}) {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -19,8 +19,8 @@ export default function NavBarCustom({handleClick}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1" onClick={handleClick}>Projekty</Nav.Link>
-            <Nav.Link href="#action2">Doświadczenie</Nav.Link>
+            <Nav.Link href="#action1" onClick={handleClickProjekty}>Projekty</Nav.Link>
+            <Nav.Link href="#action2" >Doświadczenie</Nav.Link>
             <Nav.Link href="#action3">Kontakt</Nav.Link>
 
           </Nav>

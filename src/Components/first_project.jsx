@@ -15,8 +15,9 @@ const panes = [
 
 export default function FirstProject() {
     return(
+        <div className="projectSection">
         <Grid stackable verticalAlign='middle' columns={2}>
-            <GridColumn centered id="photo_column">
+            <GridColumn centered>
                 <Image src={code} size='large' rounded id="test" />
             </GridColumn>
             <GridColumn textAlign="left">
@@ -31,5 +32,6 @@ export default function FirstProject() {
                 </Container>
             </GridColumn>
         </Grid>
+        </div>
     )
 }
