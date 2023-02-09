@@ -23,8 +23,8 @@ export default function FirstProject() {
             <GridColumn textAlign="left">
             <Container>
                 <Header as='h1' id="pod_tytul">Automatyzacja wystawiania polis</Header>
-                <Header as='h3' id="opisMnie">Jeden z najwaniejszych projektów na mojej ściezce rozwoju </Header>
-                <p>Cenie sobie ten projekt z prostej przyczyny - odpowiedział on na realne potrzeby moje i zespołu w którym pracowałem.
+                <Header as='h3' id="podTytulProjektu">Jeden z najwaniejszych projektów na mojej ściezce rozwoju </Header>
+                <p id="opisMnie">Cenie sobie ten projekt z prostej przyczyny - odpowiedział on na realne potrzeby moje i zespołu w którym pracowałem.
                     Analiza procesu i wdrozenie dedykowanego narzędzia pozwala oszczędzać 10 godzin tygodniowo.
                     Zapewnia równie elastyczność procesu, i łatwośc wdrozenia nowego pracownika.
                 </p>

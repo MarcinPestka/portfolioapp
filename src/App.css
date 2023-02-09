@@ -62,8 +62,15 @@
 }
 #opisMnie{
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 300;
+  color: black;
+  margin-top: 0;
+}
+#podTytulProjektu{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2em;
+  font-weight: 400;
   color: black;
   margin-top: 0;
 }
@@ -94,7 +101,10 @@ h1{
   margin-bottom: 0px;
   margin-top: 0px;
 }
-
+#testDisplay{
+  font-family: 'Roboto Mono', monospace!important;
+  font-weight: 300;
+}
 #pod_tytul{
   font-family: 'Roboto Mono', monospace;
   font-size: 1.8vw;
@@ -171,8 +181,8 @@ body{
   font-family: 'Roboto Mono', monospace;
   margin-bottom: 40px!important;
   font-size: 3em;
+  transition: 250ms;
   color: #000000;
-  padding-top: 200px;
 }
 .ui.header.numbered:before{
   counter-increment: section;
@@ -191,6 +201,13 @@ body{
   background-color: black;
   box-sizing: inherit;
 }
+.ui.header.numbered:hover{
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 40px!important;
+  font-size: 3em;
+  color: #0066cc;
+}
+
 .ui.card{
   text-decoration: none;
   color: inherit;
@@ -230,18 +247,20 @@ body{
   margin-left: none;
   margin-left: 10vw;
   margin-right: auto;
+  margin-top: 20px;
   }
   .ui.button.button-portfolio:hover{
-  transition : 1000ms!important;
-  padding: 15px 50px!important;
+  transition : 700ms!important;
+  padding: 20px 60px!important;
   transform : translateY(-0px)!important;
   background-color: #fff!important;
   color: #0066cc!important;
-  border: solid 2px #0066cc!important;
+  border: solid 1px #0066cc!important;
   }
 
 #separator{
   margin-left: 7em!important;
+  padding-top: 200px;
 }
 #navbarNaviation{
   font-family: 'Roboto Mono', monospace;
@@ -292,5 +311,9 @@ a.nav-link.active{
   border-color: #0066cc!important;
 }
 a.item.active{
+  font-family: 'Roboto Mono', monospace!important;
   color: #0066cc!important;
+}
+a.item{
+  font-family: 'Roboto Mono', monospace!important;
 }

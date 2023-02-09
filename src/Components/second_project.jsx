@@ -20,8 +20,8 @@ export default function SecondProject() {
             <GridColumn textAlign="right">
             <Container>
                 <Header as='h1' id="pod_tytul">Portal komunikacji miejskiej</Header>
-                <Header as='h3' id="opisMnie">Projekt który nauczył mnie bardzo duzo </Header>
-                <p>Postanowiłem ułatwić sobie dojazd do pracy dzięki portalowi komunikacji miejskiej.
+                <Header as='h3' id="podTytulProjektu">Projekt który nauczył mnie bardzo duzo </Header>
+                <p id="opisMnie">Postanowiłem ułatwić sobie dojazd do pracy dzięki portalowi komunikacji miejskiej.
                     Na portalu mozna wybrać przystanek i zobaczyć ile opóźniony jest nasz autobus.
                     Mozna równiez dodać swoją trase i przeanalizować przystanki
                 </p>
