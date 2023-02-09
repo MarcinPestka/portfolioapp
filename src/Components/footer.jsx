@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <Container id="footer">
             <a href="https://github.com/MarcinPestka/portfolioapp" id="footerHrev">
-            <p id="footerText">Designed and built by Marcin Pestka</p>
+            <p id="footerText">Designed & Built by Marcin Pestka</p>
                 <div id="githubFooter">
                     <Icon name="github" size="large"></Icon>
                     <span id="footerText">Sprawdź</span>

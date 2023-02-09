@@ -8,6 +8,7 @@ import NavBarCustom from './Components/navbar';
 import StickyIcons from './Components/stickyIcons';
 import { Container, Header } from 'semantic-ui-react';
 import Footer from './Components/footer';
+import Contact from './Components/Contact';
 
 
 function App() {
@@ -29,17 +30,23 @@ function App() {
       <div className="Contents">
         <PorftolioComponent></PorftolioComponent>
         <Container textAlign='left' id="separator">
-        <Header className='numbered' as='h1'>Moje niektóre projekty</Header>
+        <Header className='numbered' as='h1'>Moje najważnieszje projekty</Header>
         </Container>
         <div ref={refProjekty}>
           <FirstProject></FirstProject>
           <SecondProject></SecondProject>
         </div>
         <Container textAlign='left' id="separator">
-        <Header className='numbered' as='h1'>Moje wszystkie projekty</Header>
+        <Header className='numbered' as='h1'>Inne projekty warte uwagi</Header>
         </Container>
         <Container>
           <AllProjects></AllProjects>
+        </Container>
+        <Container textAlign="left" id="separator">
+            <Header className='numbered' as='h1'>Skontaktuj się ze mną</Header>
+        </Container>
+        <Container>
+        <Contact></Contact>
         </Container>
         <Container>
         <Footer></Footer>

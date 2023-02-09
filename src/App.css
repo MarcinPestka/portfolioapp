@@ -197,9 +197,12 @@ body{
   height: 2px;
   margin-bottom: 5px;
   margin-left: 20px;
-  opacity: 0.5;
-  background-color: black;
+  opacity: 1;
+  background-color: grey;
   box-sizing: inherit;
+}
+.ui.header.numbered:hover:after{
+  background-color: #0066cc;
 }
 .ui.header.numbered:hover{
   font-family: 'Roboto Mono', monospace;
@@ -258,8 +261,12 @@ body{
   border: solid 1px #0066cc!important;
   }
 
+  .ui.button.button-portfolio.center{
+    margin-left: auto;
+    margin-right: auto;
+  }
 #separator{
-  margin-left: 7em!important;
+  margin-left: 10em!important;
   padding-top: 200px;
 }
 #navbarNaviation{
@@ -281,7 +288,7 @@ div.container-fluid{
 }
 #footer{
   margin-top: 200px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 #githubFooter{
   display: inline;
@@ -320,4 +327,13 @@ a.item.active{
 }
 a.item{
   font-family: 'Roboto Mono', monospace!important;
+}
+#testWidth{
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+#noTextDecoration{
+  text-decoration: none;
 }
