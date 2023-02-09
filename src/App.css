@@ -65,6 +65,7 @@
   font-size: 1.2em;
   font-weight: 300;
   color: black;
+  margin-top: 0;
 }
 .ui.grid {
   padding-top: 70px!important;
@@ -96,9 +97,10 @@ h1{
 
 #pod_tytul{
   font-family: 'Roboto Mono', monospace;
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #0066cc;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 #divider_one{
   padding-top: 90px;
@@ -192,7 +194,9 @@ body{
 .ui.card{
   text-decoration: none;
   color: inherit;
-  width: 320px!important;
+  width: 320px!important;  
+  border: solid rgb(155, 155, 155) 1px!important;
+
 }
 
 .pattern{
@@ -201,7 +205,7 @@ body{
   width: 100vw;
   height: 100vh;
   background-color: #fcfcff;
-  opacity: 0.2;
+  opacity: 0.3;
   background-image: radial-gradient(#3d84ff 2px, #fcfcff 2px);
   background-size: 40px 40px;
 }
@@ -224,7 +228,7 @@ body{
   align-items: center;
   cursor: pointer;
   margin-left: none;
-  margin-left: 7vw;
+  margin-left: 10vw;
   margin-right: auto;
   }
   .ui.button.button-portfolio:hover{
@@ -276,10 +280,17 @@ div.container-fluid{
   text-decoration: none;
   font-weight: 400;
   color: #0066cc;
+  cursor:text;
 }
 #logoText{
   margin-left: 20px;
 }
 a.nav-link.active{
+  color: #0066cc!important;
+}
+.ui.card:hover{
+  border-color: #0066cc!important;
+}
+a.item.active{
   color: #0066cc!important;
 }

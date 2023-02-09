@@ -12,8 +12,8 @@ export default function PorftolioComponent() {
                 <Container>
                 <Header as='h1' id="tytul">Marcin Pestka</Header>
                 <Header as='h3' id="pod_tytul">Full-stack developer</Header>
-                <p id="opisMnie">Jestem studentem Uniwesytetu Gdańskiego, szukam stażu programistycznego .Net<br/>
-                Obecnie rozwijam się w tym kierunku pisania <a href="#" id="highlight">kodu dobrej jakości.</a><br/>
+                <p id="opisMnie">Jestem studentem Uniwesytetu Gdańskiego, z pierwszymi <a href="#" id="highlight">projektami komercyjnymi</a><br/>
+                Obecnie rozwijam się w tym kierunku pisania kodu dobrej jakości.<br/>
                 Ponizej opisałem projektu w których dotychczas brałem udział</p>
                 <Button className="button-portfolio">Sprawdź moje projekty</Button>
                 </Container>
