@@ -2,7 +2,9 @@
   text-align: center;
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap');
 
 .App-logo {
   height: 40vmin;
@@ -59,7 +61,10 @@
   margin-left: 5%;
 }
 #opisMnie{
-  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: black;
 }
 .ui.grid {
   padding-top: 70px!important;
@@ -88,10 +93,11 @@ h1{
   margin-bottom: 0px;
   margin-top: 0px;
 }
+
 #pod_tytul{
   font-family: 'Roboto Mono', monospace;
   font-size: 2vw;
-  color: #48505f;
+  color: #0066cc;
   margin-top: 0px;
 }
 #divider_one{
@@ -116,10 +122,14 @@ h1{
   }
   #opisMnie{
     font-size: 1em;
-
   }
   .button-portfolio{
     margin-left: 0px!important;
+  }
+}
+@media (max-width: 1250px) {
+  #testDisplay{
+    display: none;
   }
 }
 
@@ -156,11 +166,28 @@ body{
   width: 80%!important;
 }
 .ui.header.numbered{
-  padding-top: 100px;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 40px!important;
+  font-size: 3em;
+  color: #000000;
+  padding-top: 200px;
 }
 .ui.header.numbered:before{
   counter-increment: section;
   content: counter(section) ". ";
+}
+.ui.header.numbered:after{
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 2px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  opacity: 0.5;
+  background-color: black;
+  box-sizing: inherit;
 }
 .ui.card{
   text-decoration: none;
@@ -170,6 +197,7 @@ body{
 
 .pattern{
   position: fixed;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
   background-color: #fcfcff;
@@ -207,3 +235,51 @@ body{
   color: #0066cc!important;
   border: solid 2px #0066cc!important;
   }
+
+#separator{
+  margin-left: 7em!important;
+}
+#navbarNaviation{
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.container-fluid{
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light{
+  padding: 0px;
+}
+#footer{
+  margin-top: 200px;
+  padding-bottom: 100px;
+}
+#githubFooter{
+  display: inline;
+}
+
+#footerText{
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+}
+#footerHrev{
+  text-decoration: none;
+  color: inherit;
+}
+#footerHrev:hover{
+  text-decoration: none;
+  color: #0066cc;
+}
+#highlight {
+  text-decoration: none;
+  font-weight: 400;
+  color: #0066cc;
+}
+#logoText{
+  margin-left: 20px;
+}
+a.nav-link.active{
+  color: #0066cc!important;
+}

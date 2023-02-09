@@ -4,12 +4,12 @@ import 'semantic-ui-css/semantic.min.css';
 import code from "../Resources/placeHolderCode.png";
 
 const panes = [
-    { menuItem: "Technologie", render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem WinForms.
+    { menuItem: {icon: 'file code', content: 'Technologie' }, render: () => <Tab.Pane>Do implementacji narzędzia wykorzystałem WinForms.
          Zalezało mi na szybkości działania oraz bezpieczeństwie danych. </Tab.Pane> },
-    { menuItem: 'Wyzwania', render: () => <Tab.Pane>Musiałem sam od zera zająć się analizą procesu, znalezieniem moliwych optymalizacji 
+    { menuItem: {icon: 'lock', content: 'Wyzwania' }, render: () => <Tab.Pane>Musiałem sam od zera zająć się analizą procesu, znalezieniem moliwych optymalizacji 
         oraz stale dodawać nowe 
     </Tab.Pane> },
-    { menuItem: 'Benefity', render: () => <Tab.Pane>Tak jak pisałem wyzej benefity z wdrozenia nardzędzia są oblzymie, a praca dzięki 
+    { menuItem: {icon: 'dollar', content: 'Benefity' }, render: () => <Tab.Pane>Tak jak pisałem wyzej benefity z wdrozenia nardzędzia są oblzymie, a praca dzięki 
         temu idzie znacznie lepiej.</Tab.Pane> },
   ]
 
@@ -28,7 +28,7 @@ export default function FirstProject() {
                     Analiza procesu i wdrozenie dedykowanego narzędzia pozwala oszczędzać 10 godzin tygodniowo.
                     Zapewnia równie elastyczność procesu, i łatwośc wdrozenia nowego pracownika.
                 </p>
-                <Tab panes={panes} />
+                <Tab panes={panes} id="testDisplay"/>
                 </Container>
             </GridColumn>
         </Grid>

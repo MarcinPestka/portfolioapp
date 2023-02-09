@@ -25,7 +25,7 @@ export default function SecondProject() {
                     Na portalu mozna wybrać przystanek i zobaczyć ile opóźniony jest nasz autobus.
                     Mozna równiez dodać swoją trase i przeanalizować przystanki
                 </p>
-                <Tab panes={panes} />
+                <Tab panes={panes} id="testDisplay"/>
                 </Container>
             </GridColumn>
             <GridColumn centered id="">

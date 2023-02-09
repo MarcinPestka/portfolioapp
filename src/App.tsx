@@ -7,6 +7,7 @@ import AllProjects from './Components/all_Projects';
 import NavBarCustom from './Components/navbar';
 import StickyIcons from './Components/stickyIcons';
 import { Container, Header } from 'semantic-ui-react';
+import Footer from './Components/footer';
 
 
 function App() {
@@ -15,31 +16,38 @@ function App() {
   const ref3 = useRef<null | HTMLDivElement>(null);
 
   const handleClickProjekty = () => {
-    refProjekty.current?.scrollIntoView({behavior: 'smooth'});
+    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
+    <div>
+          <div className="pattern">
+      </div>
     <div className='App'>
-    <div className="pattern">
+      <StickyIcons></StickyIcons>
+      <NavBarCustom handleClickProjekty={handleClickProjekty}></NavBarCustom>
+      <div className="Contents">
+        <PorftolioComponent></PorftolioComponent>
+        <Container textAlign='left' id="separator">
+        <Header className='numbered' as='h1'>Moje niektóre projekty</Header>
+        </Container>
+        <div ref={refProjekty}>
+          <FirstProject></FirstProject>
+          <SecondProject></SecondProject>
+        </div>
+        <Container textAlign='left' id="separator">
+        <Header className='numbered' as='h1'>Moje wszystkie projekty</Header>
+        </Container>
+        <Container>
+          <AllProjects></AllProjects>
+        </Container>
+        <Container>
+        <Footer></Footer>
+        </Container>
+      </div>
+    </div>
     </div>
 
-<StickyIcons></StickyIcons>
-<NavBarCustom handleClickProjekty={handleClickProjekty}></NavBarCustom>
-<div className="Contents">
-<PorftolioComponent></PorftolioComponent>
-<Container textAlign='left'>
-<Header className='numbered' as='h1'>Moje niektóre projekty</Header>
-</Container>
-<div ref={refProjekty}>
-<FirstProject></FirstProject>
-<SecondProject></SecondProject>
-</div>
-<Header className='numbered' as='h1'>Moje wszystkie projekty</Header>
-<Container>
-<AllProjects></AllProjects>
-</Container>
-</div>
-    </div>
   );
 }
 
