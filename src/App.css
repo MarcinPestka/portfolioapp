@@ -265,8 +265,12 @@ body{
 #navbarNaviation{
   font-family: 'Roboto Mono', monospace;
   color: black;
+  font-size: 1.6em;
   padding-top: 0;
   padding-bottom: 0;
+}
+#navbarNaviation.nav-link{
+  font-size: 1.2em;
 }
 div.container-fluid{
   margin-top: 0px;
@@ -302,7 +306,7 @@ div.container-fluid{
   cursor:text;
 }
 #logoText{
-  margin-left: 20px;
+  margin-left: 25px;
 }
 a.nav-link.active{
   color: #0066cc!important;

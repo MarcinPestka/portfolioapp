@@ -12,15 +12,14 @@ export default function NavBarCustom({ handleClickProjekty }) {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        
-        <Navbar.Brand href="#" id="navbarNaviation">
+        <Navbar.Brand href="#" id="navbarNaviation" className="align-center">
         <img
               src={logo}
               width="80"
               height="80"
               className="d-inline-block align-center"
               alt="logo marcin pestka"
-            /><span id="logoText">Marcin Pestka</span></Navbar.Brand>
+            /><span id="logoText">M.Pestka</span></Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
