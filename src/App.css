@@ -94,7 +94,6 @@ h1{
   margin-right: auto!important;
   width: 30%!important;
 }
-
 #tytul{
   font-family: 'Roboto Mono', monospace;
   font-size: 5vw;
@@ -138,6 +137,9 @@ h1{
   .button-portfolio{
     margin-left: 0px!important;
   }
+  #opisMnie{
+    font-size: 0.8em;
+  }
 }
 @media (max-width: 1250px) {
   #testDisplay{
@@ -180,7 +182,7 @@ body{
 .ui.header.numbered{
   font-family: 'Roboto Mono', monospace;
   margin-bottom: 40px!important;
-  font-size: 3em;
+  font-size: 2em;
   transition: 250ms;
   color: #000000;
 }
@@ -193,7 +195,7 @@ body{
   display: inline-block;
   position: relative;
   top: -5px;
-  width: 300px;
+  width: 5em;
   height: 2px;
   margin-bottom: 5px;
   margin-left: 20px;
@@ -205,9 +207,6 @@ body{
   background-color: #0066cc;
 }
 .ui.header.numbered:hover{
-  font-family: 'Roboto Mono', monospace;
-  margin-bottom: 40px!important;
-  font-size: 3em;
   color: #0066cc;
 }
 
@@ -216,7 +215,6 @@ body{
   color: inherit;
   width: 320px!important;  
   border: solid rgb(155, 155, 155) 1px!important;
-
 }
 
 .pattern{
@@ -266,7 +264,7 @@ body{
     margin-right: auto;
   }
 #separator{
-  margin-left: 10em!important;
+  margin-left: 3em!important;
   padding-top: 200px;
 }
 #navbarNaviation{

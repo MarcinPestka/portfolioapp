@@ -1,0 +1,136 @@
+#toggle {
+    width: 50px;
+    display: flex;
+    padding: 5px;
+    background-color: #1a202c;
+    display: block;
+    border-radius: 1000px;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px -10px #000000;
+    transition: background-color 0.2s ease-in;
+    
+    .toggle-inner {
+      width: 20px;
+      height: 15px;
+      background-color: white;
+      border-radius: 1000px;
+      transition: margin-left 0.2s ease-in, background-color 0.2s ease-in;
+  
+      &.toggle-active {
+        margin-left: 20px;
+      }
+    }
+  }
+
+$light-primary:#fcfcff;
+
+.dark-mode {
+    color: white;
+    $light-primay:#090949;
+    $highlight-text-dark:#74b4f5;
+
+    #toggle {
+        background-color: white;
+    
+        .toggle-inner {
+          background-color: #1a202c;
+        }
+      }
+
+      #opisMnie{
+        color: white;
+      }
+      #tytul{
+        color: white;
+      }
+      #podTytulProjektu{
+        color: white;
+      }
+      #pod_tytul{
+        color: $highlight-text-dark;
+      }
+
+      #item-href{
+        color: inherit;
+      }
+      #custom-sticky::after{
+      background-color: white;
+      }
+
+      .ui.header.numbered{
+        color: white;
+      }
+      .ui.header.numbered:after{
+        background-color: white;
+      }
+      .ui.header.numbered:hover:after{
+        background-color: $highlight-text-dark;
+      }
+      .ui.header.numbered:hover{
+        color: $highlight-text-dark!important;
+      }
+      
+      .ui.card{
+        border: solid rgb(155, 155, 155) 1px!important;
+        color: white!important;
+        background-color: #03021100!important;
+      }
+      .header{
+        color: white!important;
+      }
+      .description{
+        color: white!important;
+      }
+      
+      .pattern{
+        opacity: 1;
+        background-color: #030211;
+        opacity: 0.8;
+        background-image: radial-gradient(#1e1f3b 2px, #030211 2px);
+        background-size: 40px 40px;
+      }
+      
+      
+      .ui.button.button-portfolio{
+        color: white;
+        background-color: #03021100;
+        border: solid white 1px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        }
+        .ui.button.button-portfolio:hover{
+        border: $highlight-text-dark;
+        color: $highlight-text-dark!important;
+        background-color: #03021100!important;
+        }
+        .ui.bottom.attached.segment.active.tab{
+            background-color: #03021100!important;
+        }
+
+      #navbarNaviation{
+        color: white;
+      }
+      a.item.active{
+        background-color: #03021100!important;
+      }
+      a.item{
+        color: white!important;
+      }
+
+      #footerHrev:hover{
+        color:$highlight-text-dark;
+      }
+      #highlight {
+        color: $highlight-text-dark;
+      }
+      a.nav-link.active{
+        color: $highlight-text-dark!important;
+      }
+      .ui.card:hover{
+        border-color: $highlight-text-dark!important;
+      }
+      a.item.active{
+        color: $highlight-text-dark!important;
+      }
+
+      
+  }

@@ -9,6 +9,8 @@ import StickyIcons from './Components/stickyIcons';
 import { Container, Header } from 'semantic-ui-react';
 import Footer from './Components/footer';
 import Contact from './Components/Contact';
+import Toggle from './Components/toggle';
+import './scss/App.scss'
 
 
 function App() {
