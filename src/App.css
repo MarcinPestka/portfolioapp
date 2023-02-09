@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600');
 
 .App-logo {
   height: 40vmin;
@@ -82,11 +83,13 @@ h1{
 }
 
 #tytul{
+  font-family: 'Roboto Mono', monospace;
   font-size: 5vw;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 #pod_tytul{
+  font-family: 'Roboto Mono', monospace;
   font-size: 2vw;
   color: #48505f;
   margin-top: 0px;
@@ -177,7 +180,7 @@ body{
 
 
 .ui.button.button-portfolio{
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 900;
   font-size: 14px;
   color: #000000;
@@ -192,7 +195,6 @@ body{
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  text-transform: lowercase;
   margin-left: none;
   margin-left: 7vw;
   margin-right: auto;
