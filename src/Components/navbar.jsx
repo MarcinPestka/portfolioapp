@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../Resources/logo_nav.png";
-import pdf from "../Resources/ph.pdf";
+import pdf from "../Resources/placeHolder.pdf";
 import { Button, Flag, Icon } from 'semantic-ui-react';
 import Toggle from './toggle';
 
