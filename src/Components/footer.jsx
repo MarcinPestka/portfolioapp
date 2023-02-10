@@ -12,7 +12,7 @@ export default function Footer() {
             <p id="footerText">Designed & Built by Marcin Pestka</p>
                 <div id="githubFooter">
                     <Icon name="github" size="large"></Icon>
-                    <span id="footerText">Sprawdź</span>
+                    <span id="footerText">Check it out</span>
                 </div>
             </a>
         </Container>

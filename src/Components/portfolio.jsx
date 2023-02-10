@@ -26,7 +26,9 @@ export default function PorftolioComponent(language) {
                 <Header as='h1' id="tytul">Marcin Pestka</Header>
                 <Header as='h3' id="pod_tytul">Full-stack developer</Header>
                 <p id="opisMnie">{parse(items.description)}</p>
-                <Button className="button-portfolio">{items.buttonText}</Button>
+                <Container textAlign="center">
+                <Button className="button-portfolio" href="#">{items.buttonText}</Button>
+                </Container>
                 </Container>
             </GridColumn>
             <GridColumn centered id="photo_column">

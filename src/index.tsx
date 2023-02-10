@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Routes/App';
+import SiteNotFound from './Routes/notFound'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -24,8 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>Niestety, nie ma takiej strony</div>,
-  },
+    element: <SiteNotFound/>  },
   
 ]);
 

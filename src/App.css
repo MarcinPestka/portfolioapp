@@ -241,12 +241,10 @@ body{
   border-radius: 12px;
   transition : 1000ms;
   transform: translateY(0);
-  display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  margin-left: none;
-  margin-left: 10vw;
+  margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   }
@@ -334,4 +332,19 @@ a.item{
 }
 #noTextDecoration{
   text-decoration: none;
+}
+#notFound{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: black;
+}
+.testt{
+  width: 60%!important;
+  padding-top: 17vw;
+}
+#notFoundFooter{
+  width: 100%!important;
+  position: fixed;
+  bottom: 10px;
 }
