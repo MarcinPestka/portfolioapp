@@ -5,11 +5,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../Resources/logo_nav.png";
-import pdf from "../Resources/Pestka_Marcin_CV.pdf";
-import { Button, Icon } from 'semantic-ui-react';
+import pdf from "../Resources/ph.pdf";
+import { Button, Flag, Icon } from 'semantic-ui-react';
 import Toggle from './toggle';
 
-export default function NavBarCustom({ handleClickProjekty }) {
+export default function NavBarCustom({ handleClickProjekty,language }) {
+  let text = {      
+    project:"Projekty",
+    expirience:"Doświadczenie",
+    contact:"Kontakt",
+    button:"Sprawdź moje cv",}
+
+  if(language == "en"){
+    text = {
+      project:"Projects",
+      expirience:"Expirience",
+      contact:"Contact",
+      button:"Check out my CV",
+  }
+
+  text = text;
+
+  }
   return (
     <Navbar expand="lg">
       <Container fluid>
@@ -30,15 +47,14 @@ export default function NavBarCustom({ handleClickProjekty }) {
             navbarScroll
           >
           
-            <Nav.Link href="#action1" onClick={handleClickProjekty} id="navbarNaviation">Projekty </Nav.Link>
-            <Nav.Link href="#action2" id="navbarNaviation">Doświadczenie</Nav.Link>
-            <Nav.Link href="#action3" id="navbarNaviation">Kontakt</Nav.Link>
+            <Nav.Link href="#action1" onClick={handleClickProjekty} id="navbarNaviation">{text.project} </Nav.Link>
+            <Nav.Link href="#action2" id="navbarNaviation">{text.expirience}</Nav.Link>
+            <Nav.Link href="#action3" id="navbarNaviation">{text.contact}</Nav.Link>
 
           </Nav>
           <Form className="d-flex">
-
             <Button animated='horizontal' color="blue" href={pdf} target = "_blank">
-              <Button.Content visible>Zobacz moje CV</Button.Content>
+              <Button.Content visible>{text.button}</Button.Content>
               <Button.Content hidden>
                 <Icon name='arrow right' />
               </Button.Content>

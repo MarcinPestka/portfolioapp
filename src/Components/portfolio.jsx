@@ -2,20 +2,31 @@ import React from "react";
 import { Button, Menu, Grid, GridColumn, Image,Header, Container } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import logo from "../Resources/IMG_2120.jpg";
+import parse from 'html-react-parser'
+
+let items = {
+    description: 'Student Uniwersytetu Gdańskiego, z doświadczeniem w realizacji <a href="#" id="highlight"> komercyjnych projektów.</a> Obecnie kontynuuję swój rozwój w zakresietworzenia <a href="#" id="highlight">kodu wysokiej jakości</a>. Dzięki mojemu zaangażowaniu i pasji, udało mi się wdrożyć w życie kilka interesujących projektów, dających mi możliwość zdobycia cennego doświadczenia i uzupełnienia moich umiejętności. ',
+    buttonText: "Sprawdź moje projekty"
+}
 
 
+export default function PorftolioComponent(language) {
 
-export default function PorftolioComponent() {
+    if(language.language == "en"){
+        items = {
+            description: 'Student at the University of Gdańsk with experience in implementing <a href="#" id="highlight">commercial projects</a>. Currently, I am continuing my development in the area of creating <a href="#" id="highlight">high-quality code</a>. Thanks to my commitment and passion, I have successfully brought several interesting projects to life, giving me the opportunity to gain valuable experience and improve my skills.',
+            buttonText: "Check out my projects"
+        }
+    }
+
     return(
         <Grid stackable verticalAlign='middle' columns={2}>
             <GridColumn textAlign="left" id="firstParagraph">
                 <Container>
                 <Header as='h1' id="tytul">Marcin Pestka</Header>
                 <Header as='h3' id="pod_tytul">Full-stack developer</Header>
-                <p id="opisMnie">Jestem studentem Uniwesytetu Gdańskiego, z pierwszymi <a href="#" id="highlight">projektami komercyjnymi</a><br/>
-                Obecnie rozwijam się w tym kierunku pisania kodu dobrej jakości.<br/>
-                Ponizej opisałem projektu w których dotychczas brałem udział</p>
-                <Button className="button-portfolio">Sprawdź moje projekty</Button>
+                <p id="opisMnie">{parse(items.description)}</p>
+                <Button className="button-portfolio">{items.buttonText}</Button>
                 </Container>
             </GridColumn>
             <GridColumn centered id="photo_column">
