@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import '../App.css';
 import PorftolioComponent from '../Components/portfolio';
-import FirstProject from '../Components/LeftSideProject';
-import SecondProject from '../Components/RightSideProject';
+import LeftSideProject from '../Components/LeftSideProject';
+import RightSideProject from '../Components/RightSideProject';
 import AllProjects from '../Components/all_Projects';
 import NavBarCustom from '../Components/navbar';
 import StickyIcons from '../Components/stickyIcons';
@@ -12,6 +12,8 @@ import Contact from '../Components/Contact';
 import Toggle from '../Components/toggle';
 import '../scss/App.scss'
 import MySkills from '../Components/mySkills';
+import code from "../Resources/ztm.png";
+import code2 from "../Resources/placeHolderCode.png";
 
 
 function App(Language:any) {
@@ -27,12 +29,20 @@ function App(Language:any) {
       title:"Policy automation",
       subTitle:"One of the most important projects in my portfolio",
       descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
+      image:(code).toString(),
+  }
+  let secondProjectText = { 
+    title:"Data analysis",
+    subTitle:"Valueable addition to my skill set",
+    descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
+    image:(code2).toString(),
   }
   let thirdProjectText = { 
     title:"Data analysis",
     subTitle:"Valueable addition to my skill set",
     descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
-}
+    image:(code).toString(),
+  }
   let text = {
     fHeader: "Moje najważniejsze projekty",
     sHeader: "Wiecęj o moich umiejętnościach",
@@ -64,9 +74,9 @@ function App(Language:any) {
             <Header className='numbered' as='h1'>{text.fHeader}</Header>
           </Container>
           <div ref={refProjekty}>
-            <FirstProject {...firstProjectText}></FirstProject>
-            <SecondProject language={Language.language}></SecondProject>
-            <FirstProject {...thirdProjectText}></FirstProject>
+            <LeftSideProject {...firstProjectText}></LeftSideProject>
+            <RightSideProject {...secondProjectText}></RightSideProject>
+            <LeftSideProject {...thirdProjectText}></LeftSideProject>
           </div>
           <Container textAlign='left' id="separator">
             <Header className='numbered' as='h1'>{text.sHeader}</Header>

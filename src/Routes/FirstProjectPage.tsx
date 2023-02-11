@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import '../App.css';
 import PorftolioComponent from '../Components/portfolio';
-import FirstProject from '../Components/LeftSideProject';
-import SecondProject from '../Components/RightSideProject';
+import LeftSideProject from '../Components/LeftSideProject';
+import RightSideProject from '../Components/RightSideProject';
 import AllProjects from '../Components/all_Projects';
 import NavBarCustom from '../Components/navbar';
 import StickyIcons from '../Components/stickyIcons';
