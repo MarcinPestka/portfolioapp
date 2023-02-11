@@ -1,8 +1,13 @@
 .App {
   text-align: center;
 }
-
-
+#separator{
+  margin-left: 3em;
+  padding-top: 200px;
+}
+div.ui.grid{
+  padding-top: 30px!important;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap');
 
@@ -118,35 +123,22 @@ h1{
   padding-right: 0px;
   padding-left: 0px;
 }
-@media (max-width: 767px) {
-  #photo_column{
-    width: 60%!important;
-  }
-  #tytul{
-    font-size: 4em;
-    margin-bottom: 0px;
-  }
-  #pod_tytul{
-    font-size: 2em;
-    color: #48505f;
-    margin-top: 0px;
-  }
-  #opisMnie{
-    font-size: 1em;
-  }
-  .button-portfolio{
-    margin-left: 0px!important;
-  }
-  #opisMnie{
-    font-size: 0.8em;
-  }
-}
+
+
 @media (max-width: 1250px) {
   #testDisplay{
     display: none;
   }
+  form.d-flex{
+    display:contents!important;
+  }
 }
-
+#toggleDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
 #custom-sticky{
   position: fixed!important;
   bottom: 0px!important;
@@ -177,7 +169,7 @@ body{
   display: block;
   margin-left: auto!important;
   margin-right: auto!important;
-  width: 80%!important;
+  width: 80%;
 }
 .ui.header.numbered{
   font-family: 'Roboto Mono', monospace;
@@ -261,10 +253,7 @@ body{
     margin-left: auto;
     margin-right: auto;
   }
-#separator{
-  margin-left: 3em!important;
-  padding-top: 200px;
-}
+
 #navbarNaviation{
   font-family: 'Roboto Mono', monospace;
   color: black;
@@ -347,4 +336,71 @@ a.item{
   width: 100%!important;
   position: fixed;
   bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  #photo_column{
+    width: 60%!important;
+    display:none;
+  }
+  #tytul{
+    font-size: 2.5em;
+    margin-bottom: 0px;
+  }
+  #pod_tytul{
+    font-size: 1.5em;
+    color: #0066cc;
+    margin-top: 0px;
+  }
+  #opisMnie{
+    font-size: 1em;
+  }
+  .button-portfolio{
+    margin-left: 0px!important;
+    margin-top: 50px!important;
+  }
+  #opisMnie{
+    font-size: 0.8em;
+  }
+  .ui.header.numbered{
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 40px!important;
+    font-size: 1.5em!important;
+    transition: 250ms;
+    color: #000000;
+  }
+  .ui.header.numbered:before{
+    counter-increment: section;
+    content: counter(section) ". ";
+  }
+  .ui.header.numbered:after{
+    display: none!important;
+  }
+  #testWidth{
+    width: 100%!important;
+  }
+  .ui.stackable.middle.aligned.two.column.grid{
+    padding-top: 10px!important;
+  }
+  #separator{
+    padding-top: 150px;
+    margin-left: none;
+  }
+  div.ui.container{
+    padding-left: 0px;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+  }
+  .ui.container.allProjects{
+  }
+  .stickyIcons{
+    display: none;
+  }
+  .projectSection{
+    width: 100%;
+  }
+  #firstParagraph{
+    margin-top: 100px!important;
+    margin-left: 0;
+  }
 }

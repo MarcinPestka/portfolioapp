@@ -1,8 +1,9 @@
 import React from "react";
-import { Tab, Grid, GridColumn, Image,Header, Container, Icon } from 'semantic-ui-react';
+import { Tab, Grid, GridColumn, Image,Header, Container, Button } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import code from "../Resources/placeHolderCode.png";
 import { analyze } from "eslint-scope";
+import { homePageProjects } from "../Models/homePageProjects";
 
 let text = {
     title:"Automatyzacja wystawiania polis",
@@ -13,8 +14,10 @@ let text = {
     benefits:"Tak jak pisałem wyzej benefity z wdrozenia nardzędzia są oblzymie, a praca dzięki temu idzie znacznie lepiej.. ",
 }
 
-export default function FirstProject(language) {
-    if(language.language == "en"){
+export default function FirstProject(textThis:homePageProjects) {
+    const url='en/policyautomation';
+    const temp = textThis;
+
         text = {
             title:"Policy automation",
             subTitle:"One of the most important projects in my portfolio",
@@ -23,7 +26,6 @@ export default function FirstProject(language) {
             obstacles:"I had to not only implement the project but also analise the existing porcesses and create brand new ones. ",
             benefits:"Tak jak pisałem wyzej benefity z wdrozenia nardzędzia są oblzymie, a praca dzięki temu idzie znacznie lepiej.. ",
         }
-    }
 
     const panes = [
         { menuItem: {icon: 'file code', content: 'Technologie' }, render: () => <Tab.Pane>{text.technology}</Tab.Pane> },
@@ -40,10 +42,12 @@ export default function FirstProject(language) {
             </GridColumn>
             <GridColumn textAlign="left">
             <Container>
-                <Header as='h1' id="pod_tytul">{text.title}</Header>
-                <Header as='h3' id="podTytulProjektu">{text.subTitle}</Header>
-                <p id="opisMnie">{text.description}</p>
-                <Tab panes={panes} id="testDisplay"/>
+                <Header as='h1' id="pod_tytul">{temp.title}</Header>
+                <Header as='h3' id="podTytulProjektu">{temp.subTitle}</Header>
+                <p id="opisMnie">{temp.descreiption}</p>
+                <Container textAlign="center">
+                <Button className="button-portfolio" href={url}>Zobacz więcej</Button>
+                </Container>
                 </Container>
             </GridColumn>
         </Grid>

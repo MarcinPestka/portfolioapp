@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import '../App.css';
 import PorftolioComponent from '../Components/portfolio';
-import FirstProject from '../Components/first_project';
-import SecondProject from '../Components/second_project';
+import FirstProject from '../Components/LeftSideProject';
+import SecondProject from '../Components/RightSideProject';
 import AllProjects from '../Components/all_Projects';
 import NavBarCustom from '../Components/navbar';
 import StickyIcons from '../Components/stickyIcons';
@@ -11,6 +11,7 @@ import Footer from '../Components/footer';
 import Contact from '../Components/Contact';
 import Toggle from '../Components/toggle';
 import '../scss/App.scss'
+import MySkills from '../Components/mySkills';
 
 
 function App(Language:any) {
@@ -22,17 +23,29 @@ function App(Language:any) {
     refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
   }
   
+  let firstProjectText = { 
+      title:"Policy automation",
+      subTitle:"One of the most important projects in my portfolio",
+      descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
+  }
+  let thirdProjectText = { 
+    title:"Data analysis",
+    subTitle:"Valueable addition to my skill set",
+    descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
+}
   let text = {
     fHeader: "Moje najważniejsze projekty",
-    sHeader: "Inne projekty warte uwagi",
-    tHeader: "Skontaktyuj się ze mną",
+    sHeader: "Wiecęj o moich umiejętnościach",
+    tHeader: "Inne projekty warte uwagi",
+    frthHeader: "Skontaktyuj się ze mną",
   }
 
   if(Language.language == "en"){
     text = {
       fHeader: "My biggest projects",
-      sHeader: "Other noteworthy projects",
-      tHeader: "Get in touch with me",
+      sHeader: "More about my skills",
+      tHeader: "Other noteworthy projects",
+      frthHeader: "Get in touch with me",
     }
   }
 
@@ -41,7 +54,9 @@ function App(Language:any) {
       <div className="pattern">
       </div>
       <div className='App'>
+        <div className="stickyIcons">
         <StickyIcons></StickyIcons>
+        </div>
         <NavBarCustom handleClickProjekty={handleClickProjekty} language={Language.language}></NavBarCustom>
         <div className="Contents">
           <PorftolioComponent language={Language.language}></PorftolioComponent>
@@ -49,17 +64,22 @@ function App(Language:any) {
             <Header className='numbered' as='h1'>{text.fHeader}</Header>
           </Container>
           <div ref={refProjekty}>
-            <FirstProject language={Language.language}></FirstProject>
+            <FirstProject {...firstProjectText}></FirstProject>
             <SecondProject language={Language.language}></SecondProject>
+            <FirstProject {...thirdProjectText}></FirstProject>
           </div>
           <Container textAlign='left' id="separator">
             <Header className='numbered' as='h1'>{text.sHeader}</Header>
+            <MySkills></MySkills>
           </Container>
-          <Container>
+          <Container textAlign='left' id="separator">
+            <Header className='numbered' as='h1'>{text.tHeader}</Header>
+          </Container>
+          <Container className="allProjects">
             <AllProjects></AllProjects>
           </Container>
           <Container textAlign="left" id="separator">
-            <Header className='numbered' as='h1'>{text.tHeader}</Header>
+            <Header className='numbered' as='h1'>{text.frthHeader}</Header>
           </Container>
           <Container>
             <Contact></Contact>

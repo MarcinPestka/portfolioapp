@@ -30,7 +30,7 @@ export default function NavBarCustom({ handleClickProjekty,language }) {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" id="navbarNaviation" className="align-center">
+        <Navbar.Brand href="/" id="navbarNaviation" className="align-center">
         <img
               src={logo}
               width="80"
@@ -60,7 +60,9 @@ export default function NavBarCustom({ handleClickProjekty,language }) {
               </Button.Content>
             </Button>
           </Form>
+          <div id="toggleDiv">
           <Icon name="lightbulb outline" size="large"></Icon><Toggle></Toggle><Icon name="moon" size="large"></Icon>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

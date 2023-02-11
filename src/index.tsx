@@ -4,11 +4,14 @@ import './index.css';
 import App from './Routes/App';
 import SiteNotFound from './Routes/notFound'
 import reportWebVitals from './reportWebVitals';
+import FirstProjectPage from './Routes/FirstProjectPage';
 import {
   createBrowserRouter,
   RouterProvider,
   Navigate,
 } from "react-router-dom";
+import SecondProjectPage from './Routes/SecondProjectPage';
+import ThirdProjectPage from './Routes/ThirdProjectPage';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +28,20 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <SiteNotFound/>  },
+    element: <SiteNotFound/>  
+  },
+  {
+    path: "en/policyAutomation",
+    element: <FirstProjectPage/>  
+  },
+  {
+    path: "en/ZtmApp",
+    element: <SecondProjectPage/>  
+  },
+  {
+    path: "en/dataAnalysis",
+    element: <ThirdProjectPage/>  
+  },
   
 ]);
 
