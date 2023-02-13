@@ -11,11 +11,12 @@ import {
 import "semantic-ui-css/semantic.min.css";
 import code from "../Resources/ztm.png";
 import { homePageProjects } from "../Models/homePageProjects";
+import parse from 'html-react-parser'
 
 
 export default function RightSideProject(textThis:homePageProjects) {
   const temp = textThis;
-  const url = "en/ztmapp";
+  const url = "/en/ztmapp";
 
   return (
     <div className="projectSection">
@@ -28,9 +29,9 @@ export default function RightSideProject(textThis:homePageProjects) {
             <Header as="h3" id="podTytulProjektu">
               {temp.subTitle}
             </Header>
-            <p id="opisMnie">{temp.descreiption}</p>
+            <p id="opisMnie">{parse(temp.descreiption)}</p>
             <Container textAlign="center">
-              <Button className="button-portfolio" href={url}>
+              <Button className="button-portfolio" href={temp.url}>
                 Zobacz więcej
               </Button>
             </Container>

@@ -3,4 +3,5 @@ export interface homePageProjects{
     subTitle:string;
     descreiption:string;
     image:string;
+    url:string,
 };

@@ -9,10 +9,9 @@ export default function Contact() {
     return (
         <div id="testWidth">
             <Container textAlign="center">
-                <p id="opisMnie">Dzięki za poświęcenie chwili i przeczytanie mojej strony. Obecnie poszukuje pracy i jestem otwarty na propozycje
-                    Jeżeli jesteś zainteresowany napisz do mnie maila  lub napisz do mnie na LinkedIn - rozważę każdą propozycję.
+                <p id="opisMnie">Thank you for taking the time to read my page. I am currently <a id="highlight">seeking employment</a> and am open to opportunities. If you are interested, please feel free to reach out to me via email or connect with me on <a id="highlight">LinkedIn.</a> 
                 </p>
-                <a id="noTextDecoration" href="mailto:pestka.m.j@gmail.com"><Button className="button-portfolio center" >Napisz mi maila</Button></a>
+                <a id="noTextDecoration" href="mailto:pestka.m.j@gmail.com"><Button className="button-portfolio center" >Write me an email!</Button></a>
             </Container>
         </div>
     )

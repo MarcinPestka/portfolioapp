@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../App.css';
 import PorftolioComponent from '../Components/portfolio';
 import LeftSideProject from '../Components/LeftSideProject';
@@ -12,36 +12,59 @@ import Contact from '../Components/Contact';
 import Toggle from '../Components/toggle';
 import '../scss/App.scss'
 import MySkills from '../Components/mySkills';
-import code from "../Resources/ztm.png";
+import ztmImg from "../Resources/ZtmScr.png";
 import code2 from "../Resources/placeHolderCode.png";
+import { useLocation } from 'react-router-dom';
 
 
 function App(Language:any) {
+  const location = useLocation();
+  useEffect(()=> {
+    if (location.hash) {
+        let elem = document.getElementById(location.hash.slice(1))
+        if (elem) {
+            elem.scrollIntoView({behavior: "smooth"})
+        }
+    } else {
+    window.scrollTo({top:0,left:0, behavior: "smooth"})
+    }
+}, [location,])
+
   const refProjekty = useRef<null | HTMLDivElement>(null);
-  const ref2 = useRef<null | HTMLDivElement>(null);
-  const ref3 = useRef<null | HTMLDivElement>(null);
+  const refExpirience = useRef<null | HTMLDivElement>(null);
+  const refContact = useRef<null | HTMLDivElement>(null);
 
   const handleClickProjekty = () => {
     refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
   }
+  const handleClickExpirience = () => {
+    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
+  }  
+  const handleClickContact = () => {
+    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
+  }
   
   let firstProjectText = { 
-      title:"Policy automation",
+      title:"Policy Issuing Automation",
       subTitle:"One of the most important projects in my portfolio",
-      descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
-      image:(code).toString(),
+      descreiption:'I value this project for its practical application in <a id="highlight">addressing the needs of my team.</a> The analysis of our processes and implementation of a dedicated tool allows us to save <a id="highlight">10 hours a week</a>. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.',
+      image:(ztmImg).toString(),
+      url:"/en/policyAutomation",
   }
+
   let secondProjectText = { 
-    title:"Data analysis",
-    subTitle:"Valueable addition to my skill set",
-    descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
-    image:(code2).toString(),
+    title:"Data analysis automation tool",
+    subTitle:"My first commercial project",
+    descreiption:'This project holds a special place in my heart because it showcased the power of <a id="highlight">effective implementation</a>. The thorough analysis of my daily tasks and development of a tool that performs them for me has ignited a <a id="highlight">passion within me for programming</a> and producing high-quality code.',
+    image:(ztmImg).toString(),
+    url:"/en/dataanalysis",
   }
   let thirdProjectText = { 
-    title:"Data analysis",
+    title:"Public Transportation App",
     subTitle:"Valueable addition to my skill set",
-    descreiption:"I value this project for its practical application in addressing the needs of my team. The analysis of our processes and implementation of a dedicated tool allows us to save 10 hours a week. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.",
-    image:(code).toString(),
+    descreiption:'I have decided to <a id="highlight">improve my daily commute</a> to work by building a public transportation portal. On the portal, one can select a stop and monitor the current status of our vehicle to avoid unnecessary waiting at the stop. Additionally, there is the option to add a custom route and thoroughly analyze available stops.',
+    image:(ztmImg).toString(),
+    url:"/en/ztmapp",
   }
   let text = {
     fHeader: "Moje najważniejsze projekty",
@@ -67,20 +90,22 @@ function App(Language:any) {
         <div className="stickyIcons">
         <StickyIcons></StickyIcons>
         </div>
-        <NavBarCustom handleClickProjekty={handleClickProjekty} language={Language.language}></NavBarCustom>
+        <NavBarCustom handleClickProjekty={handleClickProjekty} handleClickExpirience={handleClickExpirience} handleClickContact={handleClickContact} language={Language.language}></NavBarCustom>
         <div className="Contents">
           <PorftolioComponent language={Language.language}></PorftolioComponent>
+          <div id="projects">
           <Container textAlign='left' id="separator">
             <Header className='numbered' as='h1'>{text.fHeader}</Header>
           </Container>
-          <div ref={refProjekty}>
             <LeftSideProject {...firstProjectText}></LeftSideProject>
             <RightSideProject {...secondProjectText}></RightSideProject>
             <LeftSideProject {...thirdProjectText}></LeftSideProject>
           </div>
           <Container textAlign='left' id="separator">
+            <div id="exp">
             <Header className='numbered' as='h1'>{text.sHeader}</Header>
             <MySkills></MySkills>
+            </div>
           </Container>
           <Container textAlign='left' id="separator">
             <Header className='numbered' as='h1'>{text.tHeader}</Header>
@@ -91,9 +116,11 @@ function App(Language:any) {
           <Container textAlign="left" id="separator">
             <Header className='numbered' as='h1'>{text.frthHeader}</Header>
           </Container>
+          <div id="contact">
           <Container>
             <Contact></Contact>
           </Container>
+          </div>
           <Container>
             <Footer></Footer>
           </Container>

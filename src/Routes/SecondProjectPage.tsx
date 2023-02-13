@@ -19,6 +19,28 @@ function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);
   const ref2 = useRef<null | HTMLDivElement>(null);
   const ref3 = useRef<null | HTMLDivElement>(null);
+  
+  let techDesc = [
+    {
+      title:"WinForms",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor metus vitae ante egestas commodo. In pellentesque sapien non faucibus tincidunt. Donec sit amet molestie quam. Ut suscipit sem nisl, quis interdum dui aliquet vitae. Nullam elementum lectus a diam ultrices sodales eu et quam. Curabitur consequat scelerisque mauris et sollicitudin.",
+    },
+    {
+      title:".Net",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor metus vitae ante egestas commodo. In pellentesque sapien non faucibus tincidunt. Donec sit amet molestie quam. Ut suscipit sem nisl, quis interdum dui aliquet vitae. Nullam elementum lectus a diam ultrices sodales eu et quam. Curabitur consequat scelerisque mauris et sollicitudin.",
+    },
+    {
+      title:"Nuget Packages",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor metus vitae ante egestas commodo. In pellentesque sapien non faucibus tincidunt. Donec sit amet molestie quam. Ut suscipit sem nisl, quis interdum dui aliquet vitae. Nullam elementum lectus a diam ultrices sodales eu et quam. Curabitur consequat scelerisque mauris et sollicitudin.",
+    }
+  ]
+  const listItems = techDesc.map((text) =>(
+    <>
+    <h3 id="podTytulProjektu">{text.title}</h3>
+    <p id="opisMnie">{text.desc}</p>
+    </>
+  )
+  );
 
   const handleClickProjekty = () => {
     refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
@@ -54,7 +76,7 @@ function FirstProjectPage(Language:any) {
       <div className="stickyIcons">
       <StickyIcons></StickyIcons>
       </div>
-      <NavBarCustom handleClickProjekty={handleClickProjekty} language={Language.language}></NavBarCustom>
+      <NavBarCustom handleClickProjekty={handleClickProjekty} handleClickExpirience={""} handleClickContact={""} language={Language.language}></NavBarCustom>
       <div className="Contents">
         <div ref={refProjekty}>
           <Title {...FirstProjectTitleText}></Title>
@@ -62,9 +84,11 @@ function FirstProjectPage(Language:any) {
         </div>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.fHeader}</Header>
+          {listItems}
         </Container>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.sHeader}</Header>
+          {listItems}
         </Container>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.tHeader}</Header>

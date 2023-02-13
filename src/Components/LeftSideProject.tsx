@@ -4,9 +4,10 @@ import 'semantic-ui-css/semantic.min.css';
 import code from "../Resources/placeHolderCode.png";
 import { analyze } from "eslint-scope";
 import { homePageProjects } from "../Models/homePageProjects";
+import parse from 'html-react-parser'
 
 export default function LeftSideProject(textThis:homePageProjects) {
-    const url='en/policyautomation';
+    const url='/en/policyautomation';
     const temp = textThis;
 
     return(
@@ -19,9 +20,9 @@ export default function LeftSideProject(textThis:homePageProjects) {
             <Container>
                 <Header as='h1' id="pod_tytul">{temp.title}</Header>
                 <Header as='h3' id="podTytulProjektu">{temp.subTitle}</Header>
-                <p id="opisMnie">{temp.descreiption}</p>
+                <p id="opisMnie">{parse(temp.descreiption)}</p>
                 <Container textAlign="center">
-                <Button className="button-portfolio" href={url}>Zobacz więcej</Button>
+                <Button className="button-portfolio" href={temp.url}>Zobacz więcej</Button>
                 </Container>
                 </Container>
             </GridColumn>

@@ -8,25 +8,19 @@ import logo from "../Resources/logo_nav.png";
 import pdf from "../Resources/placeHolder.pdf";
 import { Button, Flag, Icon } from 'semantic-ui-react';
 import Toggle from './toggle';
+import { Link } from 'react-router-dom';
 
-export default function NavBarCustom({ handleClickProjekty,language }) {
-  let text = {      
-    project:"Projekty",
-    expirience:"Doświadczenie",
-    contact:"Kontakt",
-    button:"Sprawdź moje cv",}
+export default function NavBarCustom({ handleClickProjekty,language,handleClickExpirience, handleClickContact }) {
+    const text = {      
+    project:"Projects",
+    expirience:"Expirience",
+    contact:"Contact",
+    button:"Check out my CV",};
+    let href = "";
+    if(handleClickExpirience == ""){
+      href = "/en";
+    }
 
-  if(language == "en"){
-    text = {
-      project:"Projects",
-      expirience:"Expirience",
-      contact:"Contact",
-      button:"Check out my CV",
-  }
-
-  text = text;
-
-  }
   return (
     <Navbar expand="lg">
       <Container fluid>
@@ -46,10 +40,9 @@ export default function NavBarCustom({ handleClickProjekty,language }) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-          
-            <Nav.Link href="#action1" onClick={handleClickProjekty} id="navbarNaviation">{text.project} </Nav.Link>
-            <Nav.Link href="#action2" id="navbarNaviation">{text.expirience}</Nav.Link>
-            <Nav.Link href="#action3" id="navbarNaviation">{text.contact}</Nav.Link>
+            <Nav.Link href="/en/#projects" id="navbarNaviation">{text.project} </Nav.Link>
+            <Nav.Link href="/en/#exp" id="navbarNaviation">{text.expirience}</Nav.Link>
+            <Nav.Link href="/en/#contact" id="navbarNaviation">{text.contact}</Nav.Link>
 
           </Nav>
           <Form className="d-flex">

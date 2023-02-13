@@ -47,7 +47,7 @@ $light-primary:#fcfcff;
         color: white;
       }
       #pod_tytul{
-        color: $highlight-text-dark!important;
+        color: $highlight-text-dark;
       }
 
       #item-href{
@@ -110,7 +110,7 @@ $light-primary:#fcfcff;
         color: white;
       }
       a.item.active{
-        background-color: #03021100!important;
+        background-color: 03021100!important;
       }
       a.item{
         color: white!important;

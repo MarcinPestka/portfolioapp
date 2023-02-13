@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+.ui.header{
+  font-family: 'Roboto Mono', monospace!important;
+}
+.ui.blue.horizontal.animated.button{
+  background-color: #0066cc;
+}
+#githubHeader{
+  margin-top: 70px;
+}
 #separator{
   margin-left: 3em;
   padding-top: 200px;
@@ -293,7 +302,7 @@ div.container-fluid{
 }
 #highlight {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   color: #0066cc;
   cursor:text;
 }

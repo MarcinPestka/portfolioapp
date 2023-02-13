@@ -2,94 +2,52 @@ import React from "react";
 import { Card, Icon} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
-let items = []
-const itemsPL = [
-    {
-      header: 'Automatyzacja wystawiania polis',
-      description:
-        'Mój największy komercyjny sukces, który codziennie słuzy w działaniu agencji ubezpieczeniowej.',
-    },
-    {
-      header: 'Portal komunikacji miejskiej',
-      description:
-        'Projekt który najbardziej usprawnił moje zycie codzienne.',
-    },
-    {
-      header: 'Automatyczna generacja pdf',
-      description:
-        'Jest to projekt dzięki któremu bardzo duzo nauczylem się o tworzeniu plików.',
-    },
-    {
-      header: 'Kopiowanie tytułów ksiązek',
-      description:
-        'Projekt wykonany dla zabawy który przynosi bardzo duzo pozytku przy pisaniu pracy licencjackiej.',
-    },
-    {
-      header: 'Projekt UX portalu obsługi polis',
-      description:
-        'Projekt wykonany na potrzeby pisania pracy licencjackiej, dzięki niemu dowiedzialem się wielu przydatnych zagadnień z dziedziny UX/UI.',
-    },
-  ]
   const itemsEN = [
     {
-      header: 'Policy Automation',
+      header: 'Policy Issuing Tool',
       description:
-        'Mój największy komercyjny sukces, który codziennie słuzy w działaniu agencji ubezpieczeniowej.',
+        'My biggest commercial success, which serves daily in the operations of a large insurance agency.',
     },
     {
       header: 'Gdansk public transport site',
       description:
-        'Projekt który najbardziej usprawnił moje zycie codzienne.',
+        'A project that greatly benefits my daily personal life, I cannot imagine living without it.',
     },
     {
-      header: 'Pdf generation automation',
+      header: 'Pdf Generation Tool',
       description:
-        'Jest to projekt dzięki któremu bardzo duzo nauczylem się o tworzeniu plików.',
+        'This is a project that taught me a lot about file creation and writing reliable code - generated files are sent to clients.',
     },
     {
       header: 'Book title copying nad formating',
       description:
-        'Projekt wykonany dla zabawy który przynosi bardzo duzo pozytku przy pisaniu pracy licencjackiej.',
+        "This project was undertaken out of curiosity to explore the ease of writing a Chrome extension, resulting in a simple yet beneficial tool for writing my bachelor's thesis.",
     },
     {
-      header: 'UI/UX projekt for policy handling site',
+      header: 'UI/UX policy handling site',
       description:
-        'Projekt wykonany na potrzeby pisania pracy licencjackiej, dzięki niemu dowiedzialem się wielu przydatnych zagadnień z dziedziny UX/UI.',
+        "This project was created for the purpose of writing a bachelor's thesis and through it, I learned many useful aspects of UX/UI.",
+    },
+    {
+      header: 'Portfolio page',
+      description:
+        "Creating this website allowed me to enhance my UI/UX, Typescript, and React skills. I can confidently say I'm a Full-Stack developer.",
     },
   ]
-
+  const listItems = itemsEN.map((text) =>(
+    <Card href="https://linkedin.com" target='_blank'>
+      <Card.Content header={text.header} />
+      <Card.Content description={text.description} />
+    </Card>
+  )
+  );
 export default function AllProjects() {
 
-  if(window.location.href.slice(-2) == "en"){
-    items = itemsEN;
-  }
-  else{
-    items = itemsPL;
-  }
 
   return(
     <div>
       <Card.Group centered>
-        <Card href="https://linkedin.com" target='_blank'>
-          <Card.Content header={items[0].header} />
-          <Card.Content description={items[0].description} />
-        </Card>
-        <Card href="https://linkedin.com" target='_blank'>
-          <Card.Content header={items[1].header} />
-          <Card.Content description={items[1].description} />
-        </Card>
-        <Card href="https://linkedin.com" target='_blank'>
-          <Card.Content header={items[2].header} />
-          <Card.Content description={items[2].description} />
-        </Card>
-        <Card href="https://linkedin.com" target='_blank'>
-          <Card.Content header={items[3].header} />
-          <Card.Content description={items[3].description} />
-        </Card>
-        <Card href="https://linkedin.com" target='_blank'>
-          <Card.Content header={items[4].header} />
-          <Card.Content description={items[4].description} />
-        </Card>
+        {listItems}
       </Card.Group>
     </div>
   )
