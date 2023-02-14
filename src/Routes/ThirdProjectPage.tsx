@@ -15,6 +15,8 @@ import codeSnippet1 from "../Resources/data_analysis/codeSnippet1.png"
 import codeSnippet2 from "../Resources/data_analysis/codeSnippet2.png"
 import codeSnippet3 from "../Resources/data_analysis/codeSnippet3.png"
 import analysisScr from "../Resources/data_analysis/analysisToolScr.png";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { androidstudio } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);
@@ -39,17 +41,68 @@ function FirstProjectPage(Language:any) {
     {
       title:"Deleting rows not between",
       desc:"Wysyłając maile z przypomnieniami chcemy wysłać je do klientów których ubezpieczenie kończy się w danym okresie (wybieranym przez użytkownika). Ta funkcja usuwa wszystkie wiersze tabeli danych zawierające dane zaczytane z pliku excel i zwraca tabelę tylko z tymi wierszami które nas interesują",
-      img:codeSnippet1.toString(),
+      code:`public DataTable deleteRowsBetweenDates(DataTable table, DateTime start, DateTime end)
+      {
+          DataRow[] rows = table.Select("Column56 >= #"+start.ToString("MM/dd/yyyy")+"# AND Column56 <= #"+end.ToString("MM/dd/yyyy 23:59") +"#");
+          return rows.CopyToDataTable();
+      }`,
     },
     {
       title:"Towrzenie poszczególnych maili",
       desc:"Po skompilowaniu listy klientów do których należy wysłać maila, wywołujemy szereg funkcji tworzące kopie robocze maili na skrzynce. Na powyższym fragmencie kodu widać jak przebiega proces towrzenia takiego maila.",
-      img:codeSnippet2.toString(),
+      code:` public void CreateMailItems(List<policyData> policyList)
+      {
+          Outlook.Application outlookApp = new Outlook.Application();
+
+          //For each policy in list create mail item
+          foreach (var item in policyList)
+          {
+              // Mappin data to object
+              mailItemData data = mailItemData.CreateMailItemData(item);
+
+              //Creating new mailItem
+              Outlook.MailItem mailItem = (Outlook.MailItem)
+              outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
+              createMailItem(mailItem, data);
+
+              //Saving item as a draft
+              mailItem.Save();
+          }
+      }
+
+      private void createMailItem(Outlook.MailItem mailItem, mailItemData data )
+      {
+          mailItem.Subject = data.Subject;
+          mailItem.To = data.mail;
+          data.Body = data.Body.Replace("numerPolisy", data.policyNumber);
+          data.Body = data.Body.Replace("dataWygasniecia", data.endDate.ToString("dd.MM.yyyy"));
+          mailItem.HTMLBody = data.Body.Replace("suma1", data.PolicyType);
+      }`,
     },
     {
       title:"Tworzenie tabeli poszczególnych dni",
       desc:"Na tym fragmencie widać jak tworzymy tabelę znajdującą się na generowanym przez system raporcie sprzedaży (zobacz przykładowy raport). Tworzenie tabel w bibliotece IText 7 jest dosyć słabo skonstruowane także kod może wydawać się niejasny - aktualnie szukam lepszego rozwiązania.",
-      img:codeSnippet3.toString(),
+      code:`private Table createDayByDayTable(List<dayToDayData>  list)
+      {
+          Table dayByDayTable = new Table(7)
+              .SetFontSize(8)
+              .SetWidth(UnitValue.CreatePercentValue(80))
+              .SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER)
+              .SetMarginTop(50);
+    
+          foreach (string cellHeader in headerList)
+          {
+              dayByDayTable.AddCell(cellHeader);
+          }
+          
+          foreach (var daySalesData in list)
+          {
+              addDataCells(dayByDayTable, daySalesData);
+          }
+    
+          return dayByDayTable;
+      }
+      `,
     }
   ]
 
@@ -71,9 +124,30 @@ function FirstProjectPage(Language:any) {
     sHeader: "Code snippets",
     tHeader: "Get in touch with me",
   }
+  const codeString = `private Table createDayByDayTable(List<dayToDayData>  list)
+  {
+      Table dayByDayTable = new Table(7)
+          .SetFontSize(8)
+          .SetWidth(UnitValue.CreatePercentValue(80))
+          .SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER)
+          .SetMarginTop(50);
 
+      foreach (string cellHeader in headerList)
+      {
+          dayByDayTable.AddCell(cellHeader);
+      }
+      
+      foreach (var daySalesData in list)
+      {
+          addDataCells(dayByDayTable, daySalesData);
+      }
+
+      return dayByDayTable;
+  }
+  `;
   return (
     <div>
+
     <div className="pattern">
     </div>
     <div className='App'>
@@ -98,7 +172,9 @@ function FirstProjectPage(Language:any) {
         </Container>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.tHeader}</Header>
+          
         </Container>
+
         <Container>
           <Contact></Contact>
         </Container>
