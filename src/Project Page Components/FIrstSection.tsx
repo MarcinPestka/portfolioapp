@@ -17,7 +17,7 @@ export default function FirstSection(text:ProjectPageTexts) {
                     </Container>
                 </GridColumn>
                 <GridColumn centered id="">
-                    <Image src={code} size='large' rounded id="test" />
+                    <Image src={text.image} size='large' rounded id="test" />
                 </GridColumn>
             </Grid>
         </div>

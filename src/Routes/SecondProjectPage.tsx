@@ -52,6 +52,7 @@ function FirstProjectPage(Language:any) {
     descreiption: "Postanowiłem usprawnić moją codzienną drogę do pracy, budowałem portal komunikacji miejskiej. Na portalu można wybrać przystanek i śledzić aktualny stan naszego pojazdu, aby uniknąć niepotrzebnego czekania na przystanku. Ponadto, istnieje możliwość dodania własnej trasy i dokładnej analizy dostępnych przystanków.",
     tech:"Automatyzacja",
     learned:"Automatyzacja",
+    image:"",
   }
 
   let text = {

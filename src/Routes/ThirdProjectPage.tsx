@@ -11,6 +11,10 @@ import FirstSection from '../Project Page Components/FIrstSection';
 import ListItems from '../Components/ProjectPageList';
 import code2 from "../Resources/placeHolderCode.png";
 import ListItemsImages from '../Components/ProjectPageListImage';
+import codeSnippet1 from "../Resources/data_analysis/codeSnippet1.png"
+import codeSnippet2 from "../Resources/data_analysis/codeSnippet2.png"
+import codeSnippet3 from "../Resources/data_analysis/codeSnippet3.png"
+import analysisScr from "../Resources/data_analysis/analysisToolScr.png";
 
 function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);
@@ -33,19 +37,19 @@ function FirstProjectPage(Language:any) {
   ]
   let functionality = [
     {
-      title:"Generowanie maili do przypomnień",
-      desc:"Management of around 100/200 insurance policies per week is a major challenge even for well-organized insurance agency. With my proprietary tool, the problems practically disappear, and lets us save a lot of time not only during sending of the remainders itself, but also during the subsequent policy issuance process (see more about that)",
-      img:code2.toString(),
+      title:"Deleting rows not between",
+      desc:"Wysyłając maile z przypomnieniami chcemy wysłać je do klientów których ubezpieczenie kończy się w danym okresie (wybieranym przez użytkownika). Ta funkcja usuwa wszystkie wiersze tabeli danych zawierające dane zaczytane z pliku excel i zwraca tabelę tylko z tymi wierszami które nas interesują",
+      img:codeSnippet1.toString(),
     },
     {
-      title:"Towrzenie list windykacji",
-      desc:"Similarly to the previously mentioned list of emails, data from the Excel file is manipulated in such a way that the final file is as user-friendly as possible. I would also like to integrate the system with an SMS gateway API so that payment reminders can be automatically sent.",
-      img:code2.toString(),
+      title:"Towrzenie poszczególnych maili",
+      desc:"Po skompilowaniu listy klientów do których należy wysłać maila, wywołujemy szereg funkcji tworzące kopie robocze maili na skrzynce. Na powyższym fragmencie kodu widać jak przebiega proces towrzenia takiego maila.",
+      img:codeSnippet2.toString(),
     },
     {
-      title:"Tworzenie raportów sprzedaży",
-      desc:"This is one of the most important modules of the application, as it is used most frequently and saves significantly more time. Manually creating such a report used to take around 20 to 30 minutes, now it takes about 10 to 15 seconds. The generator is an indispensable tool - here's an example of a generated sales report.",
-      img:code2.toString(),
+      title:"Tworzenie tabeli poszczególnych dni",
+      desc:"Na tym fragmencie widać jak tworzymy tabelę znajdującą się na generowanym przez system raporcie sprzedaży (zobacz przykładowy raport). Tworzenie tabel w bibliotece IText 7 jest dosyć słabo skonstruowane także kod może wydawać się niejasny - aktualnie szukam lepszego rozwiązania.",
+      img:codeSnippet3.toString(),
     }
   ]
 
@@ -59,6 +63,7 @@ function FirstProjectPage(Language:any) {
     descreiption:"The project was designed to meet the daily needs of data analysis. Similarly to the insurance policy issuance application, it is widely used in a large insurance agency, this project ensures continuous operation and reliable analysis of sales results, as well as accurate creation of reminder email lists. Like with the policy issuance tool, my employer is extremely satisfied with the flexibility and speed of the introduced solution.",
     tech:"Automatyzacja",
     learned:"Automatyzacja",
+    image:analysisScr.toString(),
   }
 
   const text = {

@@ -13,7 +13,8 @@ import Toggle from '../Components/toggle';
 import '../scss/App.scss'
 import MySkills from '../Components/mySkills';
 import ztmImg from "../Resources/ZtmScr.png";
-import code2 from "../Resources/placeHolderCode.png";
+import pAutomation from "../Resources/policy_automation/policyAutomation.png";
+import analysisScr from "../Resources/data_analysis/analysisToolScr.png";
 import { useLocation } from 'react-router-dom';
 
 
@@ -48,7 +49,7 @@ function App(Language:any) {
       title:"Policy Issuing Automation",
       subTitle:"One of the most important projects in my portfolio",
       descreiption:'I value this project for its practical application in <a id="highlight">addressing the needs of my team.</a> The analysis of our processes and implementation of a dedicated tool allows us to save <a id="highlight">10 hours a week</a>. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.',
-      image:(ztmImg).toString(),
+      image:(pAutomation).toString(),
       url:"/en/policyAutomation",
   }
 
@@ -56,7 +57,7 @@ function App(Language:any) {
     title:"Data analysis automation tool",
     subTitle:"My first commercial project",
     descreiption:'This project holds a special place in my heart because it showcased the power of <a id="highlight">effective implementation</a>. The thorough analysis of my daily tasks and development of a tool that performs them for me has ignited a <a id="highlight">passion within me for programming</a> and producing high-quality code.',
-    image:(ztmImg).toString(),
+    image:(analysisScr).toString(),
     url:"/en/dataanalysis",
   }
   let thirdProjectText = { 

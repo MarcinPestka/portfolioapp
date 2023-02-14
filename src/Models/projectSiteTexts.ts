@@ -4,4 +4,5 @@ export interface ProjectPageTexts{
     descreiption:string;
     tech:string;
     learned:string;
+    image:string,
 };

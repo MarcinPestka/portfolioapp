@@ -9,6 +9,7 @@ import '../scss/App.scss'
 import Title from '../Project Page Components/TitleComponent';
 import FirstSection from '../Project Page Components/FIrstSection';
 import parse from 'html-react-parser'
+import pAutomation from "../Resources/policy_automation/policyAutomation.png";
 import diagram from '../Resources/policyAutomationDiagram.png'
 
 function FirstProjectPage(Language:any) {
@@ -91,6 +92,7 @@ function FirstProjectPage(Language:any) {
     descreiption:'I value this project for its practical application in <a id="highlight">addressing the needs of my team.</a> The analysis of our processes and implementation of a dedicated tool allows us to save <a id="highlight">10 hours a week</a>. Additionally, the project provides flexibility in our processes and facilitates the easy onboarding of new employees.',
     tech:"Automatyzacja",
     learned:"Automatyzacja",
+    image:pAutomation.toString(),
   }
 
   let text = {
