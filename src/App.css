@@ -30,7 +30,10 @@ div.ui.grid{
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+pre{
+  border: 2px solid #d1e5f0;
+  border-radius: 5px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -228,7 +231,6 @@ body{
   background-image: radial-gradient(#3d84ff 2px, #fcfcff 2px);
   background-size: 40px 40px;
 }
-
 
 .ui.button.button-portfolio{
   font-family: 'Roboto Mono', monospace;

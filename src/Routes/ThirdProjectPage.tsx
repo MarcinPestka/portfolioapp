@@ -16,7 +16,7 @@ import codeSnippet2 from "../Resources/data_analysis/codeSnippet2.png"
 import codeSnippet3 from "../Resources/data_analysis/codeSnippet3.png"
 import analysisScr from "../Resources/data_analysis/analysisToolScr.png";
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { androidstudio } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);

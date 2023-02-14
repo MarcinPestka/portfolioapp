@@ -21,7 +21,8 @@ import { useLocation } from 'react-router-dom';
 function App(Language:any) {
   const location = useLocation();
   useEffect(()=> {
-    if (location.hash) {
+    setTimeout(() => {
+      if (location.hash) {
         let elem = document.getElementById(location.hash.slice(1))
         if (elem) {
             elem.scrollIntoView({behavior: "smooth"})
@@ -29,6 +30,7 @@ function App(Language:any) {
     } else {
     window.scrollTo({top:0,left:0, behavior: "smooth"})
     }
+    }, 500)
 }, [location,])
 
   const refProjekty = useRef<null | HTMLDivElement>(null);
@@ -96,7 +98,7 @@ function App(Language:any) {
           <PorftolioComponent language={Language.language}></PorftolioComponent>
           <div id="projects">
           <Container textAlign='left' id="separator">
-            <Header className='numbered' as='h1'>{text.fHeader}</Header>
+            <Header className='numbered' as='h1' id="projectsHeader">{text.fHeader}</Header>
           </Container>
             <LeftSideProject {...firstProjectText}></LeftSideProject>
             <RightSideProject {...secondProjectText}></RightSideProject>
