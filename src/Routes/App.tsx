@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import '../App.css';
 import PorftolioComponent from '../Components/portfolio';
 import LeftSideProject from '../Components/LeftSideProject';
@@ -9,7 +9,6 @@ import StickyIcons from '../Components/stickyIcons';
 import { Container, Header } from 'semantic-ui-react';
 import Footer from '../Components/footer';
 import Contact from '../Components/Contact';
-import Toggle from '../Components/toggle';
 import '../scss/App.scss'
 import MySkills from '../Components/mySkills';
 import ztmImg from "../Resources/ZtmScr.png";
@@ -34,8 +33,6 @@ function App(Language:any) {
 }, [location,])
 
   const refProjekty = useRef<null | HTMLDivElement>(null);
-  const refExpirience = useRef<null | HTMLDivElement>(null);
-  const refContact = useRef<null | HTMLDivElement>(null);
 
   const handleClickProjekty = () => {
     refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
@@ -69,20 +66,11 @@ function App(Language:any) {
     image:(ztmImg).toString(),
     url:"/en/ztmapp",
   }
-  let text = {
-    fHeader: "Moje najważniejsze projekty",
-    sHeader: "Wiecęj o moich umiejętnościach",
-    tHeader: "Inne projekty warte uwagi",
-    frthHeader: "Skontaktyuj się ze mną",
-  }
-
-  if(Language.language == "en"){
-    text = {
-      fHeader: "My biggest projects",
-      sHeader: "More about my skills",
-      tHeader: "Other noteworthy projects",
-      frthHeader: "Get in touch with me",
-    }
+  const text = {
+    fHeader: "My biggest projects",
+    sHeader: "More about my skills",
+    tHeader: "Other noteworthy projects",
+    frthHeader: "Get in touch with me",
   }
 
   return (

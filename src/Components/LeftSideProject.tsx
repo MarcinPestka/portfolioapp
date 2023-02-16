@@ -1,8 +1,5 @@
-import React from "react";
-import { Tab, Grid, GridColumn, Image,Header, Container, Button } from 'semantic-ui-react';
+import { Grid, GridColumn, Image,Header, Container, Button } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import code from "../Resources/placeHolderCode.png";
-import { analyze } from "eslint-scope";
 import { homePageProjects } from "../Models/homePageProjects";
 import parse from 'html-react-parser'
 

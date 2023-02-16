@@ -1,7 +1,6 @@
-import React from "react";
-import { Button, Menu, Grid, GridColumn, Image, Header, Container, Icon } from 'semantic-ui-react';
+import { Button, Container } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import logo from "../Resources/IMG_2120.jpg";
+
 
 
 

@@ -1,5 +1,4 @@
 import parse from 'html-react-parser'
-import { Image } from 'semantic-ui-react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 

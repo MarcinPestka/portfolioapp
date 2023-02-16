@@ -9,19 +9,11 @@ import '../scss/App.scss'
 import Title from '../Project Page Components/TitleComponent';
 import FirstSection from '../Project Page Components/FIrstSection';
 import ListItems from '../Components/ProjectPageList';
-import code2 from "../Resources/placeHolderCode.png";
 import ListItemsCodeBlocks from '../Components/ProjectPageListImage';
-import codeSnippet1 from "../Resources/data_analysis/codeSnippet1.png"
-import codeSnippet2 from "../Resources/data_analysis/codeSnippet2.png"
-import codeSnippet3 from "../Resources/data_analysis/codeSnippet3.png"
 import analysisScr from "../Resources/data_analysis/analysisToolScr.png";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { vs } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);
-  const ref2 = useRef<null | HTMLDivElement>(null);
-  const ref3 = useRef<null | HTMLDivElement>(null);
 
   let obstacles = [
     {
@@ -124,27 +116,7 @@ private void createMailItem(Outlook.MailItem mailItem, mailItemData data )
     sHeader: "Code snippets",
     tHeader: "Get in touch with me",
   }
-  const codeString = `private Table createDayByDayTable(List<dayToDayData>  list)
-  {
-      Table dayByDayTable = new Table(7)
-          .SetFontSize(8)
-          .SetWidth(UnitValue.CreatePercentValue(80))
-          .SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER)
-          .SetMarginTop(50);
 
-      foreach (string cellHeader in headerList)
-      {
-          dayByDayTable.AddCell(cellHeader);
-      }
-      
-      foreach (var daySalesData in list)
-      {
-          addDataCells(dayByDayTable, daySalesData);
-      }
-
-      return dayByDayTable;
-  }
-  `;
   return (
     <div>
 
