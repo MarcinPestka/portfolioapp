@@ -1,46 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My portfolio application
 
-## Available Scripts
+An application that showcases my skills and displays my projects.
 
-In the project directory, you can run:
 
-### `npm start`
+#### Built with:
+[![My Skills](https://skillicons.dev/icons?i=react,ts,html,css,)](https://skillicons.dev)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Roadmap
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Add new features like redux to persist dark mode 
 
-### `npm test`
+- Implement database to the project to store the content of all pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Light theme
+<img width="1678" alt="Zrzut ekranu 2023-02-16 o 19 24 08" src="https://user-images.githubusercontent.com/79585523/219454844-2a36ff27-d69e-4abe-93d4-b38946f39996.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dark theme
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1680" alt="Zrzut ekranu 2023-02-16 o 19 26 43" src="https://user-images.githubusercontent.com/79585523/219454976-40b26c46-1824-41f3-9107-25645e590312.png">
 
-### `npm run eject`
+Mobile light             |  Mobile Dark
+:-------------------------:|:-------------------------:
+<img width="352" alt="Zrzut ekranu 2023-02-16 o 19 29 30" src="https://user-images.githubusercontent.com/79585523/219455634-256f5afa-3b55-4cba-8d5e-5de9bd7cf04c.png">  |  <img width="352" alt="Zrzut ekranu 2023-02-16 o 19 29 36" src="https://user-images.githubusercontent.com/79585523/219455765-4d526b79-ffdf-4153-ab43-1e4aede8f8b0.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Installation:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`npm install`  
 
-## Learn More
+To Start Server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm start`  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To Visit App:
+
+`localhost:3000`  
+
+
+## Lessons Learned
+
+Great project to further improve my front-end skills.
+
+
