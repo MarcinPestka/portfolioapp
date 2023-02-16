@@ -1,72 +1,101 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import '../App.css';
-import PorftolioComponent from '../Components/portfolio';
-import LeftSideProject from '../Components/LeftSideProject';
-import RightSideProject from '../Components/RightSideProject';
-import AllProjects from '../Components/all_Projects';
 import NavBarCustom from '../Components/navbar';
 import StickyIcons from '../Components/stickyIcons';
 import { Container, Header } from 'semantic-ui-react';
 import Footer from '../Components/footer';
 import Contact from '../Components/Contact';
-import Toggle from '../Components/toggle';
 import '../scss/App.scss'
-import MySkills from '../Components/mySkills';
 import Title from '../Project Page Components/TitleComponent';
 import FirstSection from '../Project Page Components/FIrstSection';
+import ListItemsCodeBlocks from '../Components/ProjectPageListImage';
+import ListItems from '../Components/ProjectPageList';
+import ztmImg from "../Resources/ZtmScr.png";
 
 function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);
-  const ref2 = useRef<null | HTMLDivElement>(null);
-  const ref3 = useRef<null | HTMLDivElement>(null);
   
-  let techDesc = [
+  let functionality = [
     {
-      title:"WinForms",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor metus vitae ante egestas commodo. In pellentesque sapien non faucibus tincidunt. Donec sit amet molestie quam. Ut suscipit sem nisl, quis interdum dui aliquet vitae. Nullam elementum lectus a diam ultrices sodales eu et quam. Curabitur consequat scelerisque mauris et sollicitudin.",
+      title:"Autocomplete Text box",
+      desc:"Po wywołaniu danych z mojego API .Net (sprawdz repo tutaj) dane zaczytują się do autocompleting text box co jest bardzo przydatne i ułatwia życie. ",
     },
     {
-      title:".Net",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor metus vitae ante egestas commodo. In pellentesque sapien non faucibus tincidunt. Donec sit amet molestie quam. Ut suscipit sem nisl, quis interdum dui aliquet vitae. Nullam elementum lectus a diam ultrices sodales eu et quam. Curabitur consequat scelerisque mauris et sollicitudin.",
+      title:"Auto odświerzanie",
+      desc:"Dane podawanie przez miasto Gdańsk są stale odświerzane (z dokumentacji wynika że co 10 sekund) dlatego dane na stornie również odświerzają się co 10 sekund wywołując nowe dane z API.",
     },
     {
-      title:"Nuget Packages",
-      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor metus vitae ante egestas commodo. In pellentesque sapien non faucibus tincidunt. Donec sit amet molestie quam. Ut suscipit sem nisl, quis interdum dui aliquet vitae. Nullam elementum lectus a diam ultrices sodales eu et quam. Curabitur consequat scelerisque mauris et sollicitudin.",
+      title:"Upcoming features",
+      desc:"W niedoległej przyszłości zaimplementować funkcje takie jak tworzenie konta, zapisywanie ulubionych przystanków oraz wyświetlanie tras autobusów. Projekt jest w trakcie realizacji",
     }
   ]
-  const listItems = techDesc.map((text) =>(
-    <>
-    <h3 id="podTytulProjektu">{text.title}</h3>
-    <p id="opisMnie">{text.desc}</p>
-    </>
-  )
-  );
+  let codeSnippets = [
+    {
+      title:"Deleting rows not between",
+      desc:"Below snippet is the interface for bus information that is needed to be displayed on the homepage, such as the bus number, head sign, seconds of delay, and for easier processing, data formatted for display.",
+      code:`export default interface busInfo{
+        busNumber:string,
+        headSign:string,
+        delaySeconds:number,
+        displayedTime:string,
+    }`,
+    },
+    {
+      title:"Mapowanie oraz wyświetlanie pełnej listy autobusów",
+      desc:"StopsList function takes an array of data for individual bus stops as a parameter, and if the array is not empty, the function returns a list of stops in the configuration: description - stop ID.",
+      code:`export default function StopsList(props: { Stops: DaneStopow[] }) {
+        if (props.Stops[0] != undefined) {
+      
+          const listItems = props.Stops.map((text) => (
+            <li>{text.stopDesc} - {text.stopId} </li>
+            ));
+            
+          return (
+            <ul>
+              {listItems}
+            </ul>
+          )}
+      
+        else {
+          return (
+            <></>
+          )
+        }
+      }`,
+    },
+    {
+      title:"Pobieranie oraz manipulowanie danych",
+      desc:"Retrieving information about bus departures from a specific stop specified as stopID from my API and mapping them to an array of departures, which is later displayed.",
+      code:`function getDepartures({setDepartures}:any,stopId:string) {
+        axios({
+          method: 'get',
+          url: 'http://localhost:5045/departures/GetDepartures?id='+stopId,
+        })
+          .then(function (response) {
+           setDepartures(mapDepartures(response.data));
+          });
+      }`,
+    }
+  ]
 
   const handleClickProjekty = () => {
     refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
   }
   
   const FirstProjectTitleText = {
-    title:"Portal komunikacji miejskiej",
-    subTitle:"Ten projekt znacznie ułatwia moje zycie codzienne",
-    descreiption: "Postanowiłem usprawnić moją codzienną drogę do pracy, budowałem portal komunikacji miejskiej. Na portalu można wybrać przystanek i śledzić aktualny stan naszego pojazdu, aby uniknąć niepotrzebnego czekania na przystanku. Ponadto, istnieje możliwość dodania własnej trasy i dokładnej analizy dostępnych przystanków.",
+    title:"Public Transportation App",
+    subTitle:"Valueable addition to my skill set",
+    descreiption: 'I have decided to <a id="highlight">improve my daily commute</a> to work by building a public transportation portal. On the portal, one can select a stop and monitor the current status of our vehicle to avoid unnecessary waiting at the stop. Additionally, there is the option to add a custom route and thoroughly analyze available stops.',
     tech:"Automatyzacja",
     learned:"Automatyzacja",
-    image:"",
+    image:ztmImg.toString(),
   }
 
-  let text = {
-    fHeader: "Zastosowane technologie",
-    sHeader: "Czego się nauczyłem",
-    tHeader: "Skontaktyuj się ze mną",
-  }
 
-  if(Language.language == "en"){
-    text = {
-      fHeader: "My biggest projects",
-      sHeader: "More about my skills",
-      tHeader: "Other noteworthy projects",
-    }
+   const text = {
+      fHeader: "Features",
+      sHeader: "Code snippets",
+      tHeader: "Get in touch with me",
   }
 
   return (
@@ -85,11 +114,11 @@ function FirstProjectPage(Language:any) {
         </div>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.fHeader}</Header>
-          {listItems}
+          <ListItems Texts={functionality}></ListItems>
         </Container>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.sHeader}</Header>
-          {listItems}
+          <ListItemsCodeBlocks Texts={codeSnippets}></ListItemsCodeBlocks>
         </Container>
         <Container textAlign="left" id="separator">
           <Header className='numbered' as='h1'>{text.tHeader}</Header>

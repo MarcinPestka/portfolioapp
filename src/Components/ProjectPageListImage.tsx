@@ -9,14 +9,14 @@ interface texts{
     code:string,
   }
   
-export default function ListItemsImages(props:{Texts:texts[]}) {
+export default function ListItemsCodeBlocks(props:{Texts:texts[]}) {
     const list = props.Texts.map((text) =>(
       <>
-      <h3 id="podTytulProjektu">{text.title}</h3>
+      <h3 id="projectListHeader" className='codeSnippet'>{text.title}</h3>
+      <p id="opisMnie">{parse(text.desc)}</p>
       <SyntaxHighlighter language="csharp"  style={vs}>
       {text.code}
       </SyntaxHighlighter>
-      <p id="opisMnie">{parse(text.desc)}</p>
       </>
     ))
     return(

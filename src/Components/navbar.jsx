@@ -40,9 +40,9 @@ export default function NavBarCustom({ handleClickProjekty,language,handleClickE
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/en/#projectsHeader" id="navbarNaviation">{text.project} </Nav.Link>
-            <Nav.Link href="/en/#exp" id="navbarNaviation">{text.expirience}</Nav.Link>
-            <Nav.Link href="/en/#contact" id="navbarNaviation">{text.contact}</Nav.Link>
+            <Nav.Link href="/en#projectsHeader" id="navbarNaviation">{text.project} </Nav.Link>
+            <Nav.Link href="/en#exp" id="navbarNaviation">{text.expirience}</Nav.Link>
+            <Nav.Link href="/en#contact" id="navbarNaviation">{text.contact}</Nav.Link>
 
           </Nav>
           <Form className="d-flex">

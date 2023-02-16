@@ -21,6 +21,7 @@ export default function RightSideProject(textThis:homePageProjects) {
   return (
     <div className="projectSection">
       <Grid stackable verticalAlign="middle" columns={2}>
+        <Image src={temp.image} size="medium" rounded id="testRight" centered/>
         <GridColumn textAlign="right">
           <Container>
             <Header as="h1" id="pod_tytul">
@@ -37,8 +38,8 @@ export default function RightSideProject(textThis:homePageProjects) {
             </Container>
           </Container>
         </GridColumn>
-        <GridColumn centered id="">
-          <Image src={temp.image} size="large" rounded id="test" />
+        <GridColumn centered id="big-screen-image">
+          <Image src={temp.image} size="medium" rounded id="test" centered/>
         </GridColumn>
       </Grid>
     </div>

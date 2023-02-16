@@ -14,7 +14,7 @@ export default function LeftSideProject(textThis:homePageProjects) {
         <div className="projectSection">
         <Grid stackable verticalAlign='middle' columns={2}>
             <GridColumn centered>
-                <Image src={temp.image} size='large' rounded id="test" />
+                <Image src={temp.image} size='large' rounded id="test" centered/>
             </GridColumn>
             <GridColumn textAlign="left">
             <Container>

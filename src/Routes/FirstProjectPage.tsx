@@ -11,6 +11,7 @@ import FirstSection from '../Project Page Components/FIrstSection';
 import parse from 'html-react-parser'
 import pAutomation from "../Resources/policy_automation/policyAutomation.png";
 import diagram from '../Resources/policyAutomationDiagram.png'
+import ListItems from '../Components/ProjectPageList';
 
 function FirstProjectPage(Language:any) {
   const refProjekty = useRef<null | HTMLDivElement>(null);
@@ -28,26 +29,26 @@ function FirstProjectPage(Language:any) {
 
   let obstacles = [
     {
-      title:"Brak Api systemu wystawiania polis",
+      title:"No API available to integrate with third party system",
       desc:"The biggest challenge that I overcame was the lack of integration of the insurance policy issuance system, using API it would be much easier to build the system. Without API, data retrieval relies on exporting data to an .xslx file and loading it into a data table in the application's memory.",
     },
     {
-      title:"Skomplikowana logika biznesowa",
+      title:"Complicated business logic",
       desc:"Another challenge was the complicated process of issuing policy renewals. For example, the insurance period must not overlap. I had to spend a lot of time on data validation and connecting to the address database to ensure that the data being transmitted is correct.",
     },
     {
-      title:"User expirience jako priorytet",
+      title:"User expirience as a priority",
       desc:"The next challenge I took very seriously as a goal was to build a tool with a focus on user experience. So that a new employee could be integrated in the shortest possible time. The process was previously much more complicated, now it is so simple that even an inexperienced employee works very efficiently. And can learn about the process from my simple documentation",
     }
   ]
   let techDesc = [
     {
-      title:"C#",
-      desc:"Feeling very comfortable writing in C# is why I made the decision to use this technology. I can confidently say that I do not regret my decision, as this choice has brought me many benefits and taught me a lot. Additionally, working with C# has allowed me to further develop my skills and broaden my knowledge in programming. The versatility and simplicity of this language have made it a great choice for a variety of projects. Furthermore, the community and resources available for C# are extensive, providing a wealth of information and support. Overall, I am extremely satisfied with my decision to use C# and look forward to continuing to work with this language in the future.",
+      title:".Net",
+      desc:"Feeling very comfortable writing in C# is why I made the decision to use this technology. I can confidently say that I do not regret my decision, as this choice has brought me many benefits and taught me a lot. Additionally, working with C# has allowed me to further develop my skills and broaden my knowledge in programming. The versatility and simplicity of this language have made it a great choice for a variety of projects. Community and resources available for C# are extensive, providing a wealth of information and support.",
     },
     {
       title:"WinForms",
-      desc:"ZMy decision to choose WinForms technology was based on the need to create a clear and user-friendly interface. The simple interface creation rules allowed me to save time and quickly implement the tool, which was a priority in my project. The knowledge and experience gained while using WinForms was invaluable, as it allowed me to better understand and more effectively utilize this technology in future projects.",
+      desc:"My decision to choose WinForms technology was based on the need to create a clear and user-friendly interface. The simple interface creation rules allowed me to save time and quickly implement the tool, which was a priority in my project. The knowledge and experience gained while using WinForms was invaluable, as it allowed me to better understand and more effectively utilize this technology in future projects.",
     },
     {
       title:"Nuget Packages",
@@ -71,20 +72,6 @@ function FirstProjectPage(Language:any) {
       desc:"As previously mentioned, we do not have the possibility to connect to the API of the insurance policy issuance system, which we unfortunately have to use. Below is a diagram describing the process of creating a list of policies for renewal. The tool could automatically read policy numbers from the inbox, however, some clients request changes to the coverage or personal information.",
     },
   ]
-
-  function ListItems(props:{Texts:texts[]}) {
-    const list = props.Texts.map((text) =>(
-      <>
-      <h3 id="podTytulProjektu">{text.title}</h3>
-      <p id="opisMnie">{parse(text.desc)}</p>
-      </>
-    ))
-    return(
-      <>
-      {list}
-      </>
-    )
-  }
 
   const FirstProjectTitleText = {
     title:"Policy Issuing Automation",

@@ -4,41 +4,6 @@ import 'semantic-ui-css/semantic.min.css';
 
   const itemsEN = [
     {
-      header: 'Policy Issuing Tool',
-      link:"/en/policyautomation",
-      target:"",
-      description:
-        'My biggest commercial success, which serves daily in the operations of a large insurance agency.',
-    },
-    {
-      header: 'Gdansk public transport site',
-      link:"https://github.com/MarcinPestka/public-transportation-portal",
-      target:"_blank",
-      description:
-        'A project that greatly benefits my daily personal life, I cannot imagine living without it.',
-    },
-    {
-      header: 'Data analysis automation tool',
-      link:"/en/dataanalysis",
-      target:"",
-      description:
-        'This is a project that taught me a lot about file creation and writing reliable code - generated files are sent to clients.',
-    },
-    {
-      header: 'Book title copying nad formating',
-      link:"https://github.com/MarcinPestka/Library-site-chrome-extension",
-      target:"_blank",
-      description:
-        "This project was undertaken out of curiosity to explore the ease of writing a Chrome extension, resulting in a simple yet beneficial tool for writing my bachelor's thesis.",
-    },
-    {
-      header: 'UI/UX policy handling site',
-      link:"",
-      target:"",
-      description:
-        "This project was created for the purpose of writing a bachelor's thesis and through it, I learned many useful aspects of UX/UI.",
-    },
-    {
       header: 'Portfolio page',
       link:"https://github.com/MarcinPestka/portfolioapp",
       target:"_blank",
@@ -52,6 +17,13 @@ import 'semantic-ui-css/semantic.min.css';
       description:
         "This project was undertaken out of curiosity to explore the ease of writing a Chrome extension, resulting in a simple yet beneficial tool for writing my bachelor's thesis.",
     },
+    {
+      header: 'Book title copying nad formating',
+      link:"https://github.com/MarcinPestka/Library-site-chrome-extension",
+      target:"_blank",
+      description:
+        "This project was undertaken out of curiosity to explore the ease of writing a Chrome extension, resulting in a simple yet beneficial tool for writing my bachelor's thesis.",
+    }
   ]
   const listItems = itemsEN.map((text) =>(
     <Card href={text.link} target={text.target}>
@@ -65,7 +37,7 @@ export default function AllProjects() {
 
   return(
     <div>
-      <Card.Group centered>
+      <Card.Group centered id="AllProjectsCardsGroup">
         {listItems}
       </Card.Group>
     </div>

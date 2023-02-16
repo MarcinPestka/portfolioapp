@@ -8,7 +8,7 @@ import parse from 'html-react-parser'
 export default function FirstSection(text:ProjectPageTexts) {
     const test = text;
     return (
-        <div className="projectSection">
+        <Container textAlign="left">
 
             <Grid stackable verticalAlign='middle' columns={2}>
                 <GridColumn textAlign="left">
@@ -17,9 +17,9 @@ export default function FirstSection(text:ProjectPageTexts) {
                     </Container>
                 </GridColumn>
                 <GridColumn centered id="">
-                    <Image src={text.image} size='large' rounded id="test" />
+                    <Image src={text.image} size='medium' rounded id="test" />
                 </GridColumn>
             </Grid>
-        </div>
+        </Container>
     )
 }

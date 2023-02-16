@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Navigate to="en" />,
   },
   {
-    path: "en",
+    path: "en/",
     element: <App language='en'/>,
   },
   {
