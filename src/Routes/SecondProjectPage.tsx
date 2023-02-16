@@ -18,15 +18,15 @@ function FirstProjectPage(Language:any) {
   let functionality = [
     {
       title:"Autocomplete Text box",
-      desc:"Po wywołaniu danych z mojego API .Net (sprawdz repo tutaj) dane zaczytują się do autocompleting text box co jest bardzo przydatne i ułatwia życie. ",
+      desc:"After calling the data from my .NET API, the data is loaded into an autocompleting text box, which is very useful and makes picking desired bus stop easier. ",
     },
     {
       title:"Auto odświerzanie",
-      desc:"Dane podawanie przez miasto Gdańsk są stale odświerzane (z dokumentacji wynika że co 10 sekund) dlatego dane na stornie również odświerzają się co 10 sekund wywołując nowe dane z API.",
+      desc:"The data provided by the city of Gdansk is constantly refreshed (according to the documentation, every 10 seconds), so the data on the website is also refreshed every 10 seconds by calling the new data from the API",
     },
     {
       title:"Upcoming features",
-      desc:"W niedoległej przyszłości zaimplementować funkcje takie jak tworzenie konta, zapisywanie ulubionych przystanków oraz wyświetlanie tras autobusów. Projekt jest w trakcie realizacji",
+      desc:"In the near future, features such as account creation, saving favorite stops, and displaying bus routes will be implemented. The project is currently in progress.",
     }
   ]
   let codeSnippets = [

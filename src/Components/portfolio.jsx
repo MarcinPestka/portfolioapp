@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Menu, Grid, GridColumn, Image,Header, Container } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import logo from "../Resources/ja3.jpg";
+import logo from "../Resources/ja_no_bg.png";
 import parse from 'html-react-parser'
 
 let items = {

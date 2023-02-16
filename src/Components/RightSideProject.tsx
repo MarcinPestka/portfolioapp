@@ -33,7 +33,7 @@ export default function RightSideProject(textThis:homePageProjects) {
             <p id="opisMnie">{parse(temp.descreiption)}</p>
             <Container textAlign="center">
               <Button className="button-portfolio" href={temp.url}>
-                Zobacz więcej
+              See more
               </Button>
             </Container>
           </Container>

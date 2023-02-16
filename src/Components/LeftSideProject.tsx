@@ -22,7 +22,7 @@ export default function LeftSideProject(textThis:homePageProjects) {
                 <Header as='h3' id="podTytulProjektu">{temp.subTitle}</Header>
                 <p id="opisMnie">{parse(temp.descreiption)}</p>
                 <Container textAlign="center">
-                <Button className="button-portfolio" href={temp.url}>Zobacz więcej</Button>
+                <Button className="button-portfolio" href={temp.url}>See more</Button>
                 </Container>
                 </Container>
             </GridColumn>
