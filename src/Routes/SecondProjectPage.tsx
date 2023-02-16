@@ -17,11 +17,11 @@ function FirstProjectPage(Language:any) {
   
   let functionality = [
     {
-      title:"Autocomplete Text box",
+      title:"Autocompleting TextBox",
       desc:"After calling the data from my .NET API, the data is loaded into an autocompleting text box, which is very useful and makes picking desired bus stop easier. ",
     },
     {
-      title:"Auto odświerzanie",
+      title:"Auto refreshing",
       desc:"The data provided by the city of Gdansk is constantly refreshed (according to the documentation, every 10 seconds), so the data on the website is also refreshed every 10 seconds by calling the new data from the API",
     },
     {
