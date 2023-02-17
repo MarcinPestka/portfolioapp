@@ -332,6 +332,11 @@ div.container-fluid{
   color: #0066cc;
   cursor:text;
 }
+#highlightLink{
+  font-weight: 500;
+  text-decoration: none;
+  color: #0066cc;
+}
 #logoText{
   margin-left: 25px;
 }
