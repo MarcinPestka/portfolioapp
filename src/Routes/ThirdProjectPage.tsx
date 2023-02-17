@@ -16,21 +16,21 @@ function FirstProjectPage(Language:any) {
   let obstacles = [
     {
       title:"Generating mailing lists",
-      desc:"Management of around 100/200 insurance policies per week is a major challenge even for well-organized insurance agency. With my proprietary tool, the problems practically disappear, and lets us save a lot of time not only during sending of the remainders itself, but also during the subsequent policy issuance process (see more about that)",
+      desc:"Management of around <a id='highlight'>100/200 insurance policies</a> per week is a major challenge even for well-organized insurance agency. With my proprietary tool, the problems practically disappear, and lets us <a id='highlight'>save a lot of time</a> not only during sending of the remainders itself, but also during the subsequent policy issuance process <a href='/en/policyAutomation' id='highlightLink'>(see more about that).</a>",
     },
     {
       title:"Generating vindication lists",
-      desc:"Similarly to the previously mentioned list of emails, data from the Excel file is manipulated in such a way that the final file is as user-friendly as possible. I would also like to integrate the system with an SMS gateway API so that payment reminders can be automatically sent.",
+      desc:"Similarly to the previously mentioned list of emails, data from the Excel file is manipulated in such a way that the final file is <a id='highlight'>as user-friendly as possible.<a/> I would also like to integrate the system with an <a id='highlight'>SMS gateway API<a/> so that payment reminders can be automatically sent.",
     },
     {
       title:"Sales report generator",
-      desc:"This is one of the most important modules of the application, as it is used most frequently and saves significantly more time. Manually creating such a report used to take around 20 to 30 minutes, now it takes about 10 to 15 seconds. The generator is an indispensable tool - here's an example of a generated sales report.",
+      desc:"This is one of the most important modules of the application, as it is used most frequently and saves significantly more time. Manually creating such a report used to take around <a id='highlight'>20 to 30 minutes, now it takes about 10 to 15 seconds.<a/> The generator is an indispensable tool - here's an example of a generated sales report.",
     }
   ]
   let codeSnippets = [
     {
       title:"Deleting rows not between",
-      desc:"When sending reminder emails, we want to send them to customers whose insurance is ending within a specific period (selected by the user). This function deletes all rows in the data table that contain data read from an Excel file and returns the table only with the rows that interest us.",
+      desc:"When sending reminder emails, we want to send them to customers whose insurance is <a id='highlight'>ending within a specific period</a> (selected by the user). This function <a id='highlight'>deletes all rows</a> in the data table that contain data read from an Excel file and returns the table only with the rows that interest us.",
       code:`public DataTable deleteRowsBetweenDates(DataTable table, DateTime start, DateTime end)
       {
           DataRow[] rows = table.Select("Column56 >= #"+start.ToString("MM/dd/yyyy")+"# AND Column56 <= #"+end.ToString("MM/dd/yyyy 23:59") +"#");
@@ -38,8 +38,26 @@ function FirstProjectPage(Language:any) {
       }`,
     },
     {
+      title:"Deleting policies that are already issued",
+      desc:"We dont want to send reminders about ending policies to customers that already renewed them, so I had to implement a function that deletes undesired records from the data table. Using <a id='highlight'>LINQ</a> made making this function so much easier and is a valuable tool in my constantly growind skillset.",
+      code:`public DataTable uniqueValues(DataTable oldPolicyTable, DataTable newPolicyTable)
+      {
+          var rowsToDelete = from r1 in oldPolicyTable.AsEnumerable()
+                             join r2 in newPolicyTable.AsEnumerable()
+                                  on r1.Field<String>("Column29") equals r2.Field<String>("Column29")
+                             select r1;
+
+          foreach (DataRow row in rowsToDelete.ToArray())
+              row.Delete();
+
+          oldPolicyTable.AcceptChanges();
+
+          return oldPolicyTable;
+      }`,
+    },
+    {
       title:"Towrzenie poszczególnych maili",
-      desc:"After compiling a list of customers to whom an email should be sent, we run a series of functions that create draft copies of the emails in the mailbox. The above code fragment shows how the process of creating such an email proceeds..",
+      desc:"After compiling a list of customers to whom an email should be sent, we run a series of functions that <a id='highlight'>create draft copies of the emails in the mailbox.<a/> The code fragment below shows how the process of creating such an email proceeds.",
       code:`public void CreateMailItems(List<policyData> policyList)
       {
           Outlook.Application outlookApp = new Outlook.Application();
@@ -71,7 +89,7 @@ private void createMailItem(Outlook.MailItem mailItem, mailItemData data )
     },
     {
       title:"Tworzenie tabeli poszczególnych dni",
-      desc:"This code fragment shows how we create a table that appears in the sales report generated by the system (see sample report). The process of creating tables in the iText 7 library is not very well structured, so the code may seem unclear - we are currently looking for a better solution.",
+      desc:"This code fragment shows how we create a table that appears in the sales report generated by the system (see sample report). The process of creating tables in the <a id='highlight'>iText7</a> library is not very well structured, so the code may seem unclear - we are currently looking for a better solution.",
       code:`private Table createDayByDayTable(List<dayToDayData>  list)
       {
           Table dayByDayTable = new Table(7)
@@ -94,6 +112,7 @@ private void createMailItem(Outlook.MailItem mailItem, mailItemData data )
       }
       `,
     }
+
   ]
   
   const FirstProjectTitleText = {
