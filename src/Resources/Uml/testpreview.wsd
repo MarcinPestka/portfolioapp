@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+actor Employee as emp
+
+
+usecase "Send reminder \nemails" as SendEmails
+usecase "Generate list" as GenerateList
+
+(SendEmails) ..> (GenerateList) : include
+(GenerateList) ..> (manipulateData) : include
+
+usecase "Send sales raport \nto boss" as SalesRaport
+usecase "Generate PDF" as generatePDf
+usecase "Mainipulate data" as manipulateData
+(SalesRaport) ..> (generatePDf) : include
+(generatePDf) ..> (manipulateData) : include
+
+usecase "Generate sms \n list" as GenerateSMSList
+(GenerateSMSList) ..> (GenerateList) : include
+
+usecase "Generate late payments \n list" as GenerateVindication
+(GenerateVindication) ..> (GenerateList) : include
+
+emp --> SendEmails
+emp --> SalesRaport
+emp --> GenerateSMSList
+emp --> GenerateVindication
+@enduml
