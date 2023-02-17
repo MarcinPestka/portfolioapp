@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import '../App.css';
 import NavBarCustom from '../Components/navbar';
 import StickyIcons from '../Components/stickyIcons';
@@ -13,7 +12,6 @@ import ListItemsCodeBlocks from '../Components/ProjectPageListImage';
 import analysisScr from "../Resources/data_analysis/analysisToolScr.png";
 
 function FirstProjectPage(Language:any) {
-  const refProjekty = useRef<null | HTMLDivElement>(null);
 
   let obstacles = [
     {
@@ -97,10 +95,6 @@ private void createMailItem(Outlook.MailItem mailItem, mailItemData data )
       `,
     }
   ]
-
-  const handleClickProjekty = () => {
-    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
-  }
   
   const FirstProjectTitleText = {
     title:"Data analysis automation tool",
@@ -126,9 +120,9 @@ private void createMailItem(Outlook.MailItem mailItem, mailItemData data )
       <div className="stickyIcons">
       <StickyIcons></StickyIcons>
       </div>
-      <NavBarCustom handleClickProjekty={handleClickProjekty} handleClickExpirience={""} handleClickContact={""} language={Language.language}></NavBarCustom>
+      <NavBarCustom></NavBarCustom>
       <div className="Contents">
-        <div ref={refProjekty}>
+        <div>
           <Title {...FirstProjectTitleText} ></Title>
           <FirstSection {...FirstProjectTitleText}></FirstSection>
         </div>

@@ -2,24 +2,18 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../Resources/logo_nav.png";
 import pdf from "../Resources/placeHolder.pdf";
-import { Button, Flag, Icon } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 import Toggle from './toggle';
-import { Link } from 'react-router-dom';
 
-export default function NavBarCustom({ handleClickProjekty,language,handleClickExpirience, handleClickContact }) {
+export default function NavBarCustom() {
     const text = {      
     project:"Projects",
     expirience:"Expirience",
     contact:"Contact",
     button:"Check out my CV",};
-    let href = "";
-    if(handleClickExpirience == ""){
-      href = "/en";
-    }
 
   return (
     <Navbar expand="lg">

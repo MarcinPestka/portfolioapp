@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import '../App.css';
 import NavBarCustom from '../Components/navbar';
 import StickyIcons from '../Components/stickyIcons';
@@ -13,12 +12,6 @@ import diagram from '../Resources/policyAutomationDiagram.png'
 import ListItems from '../Components/ProjectPageList';
 
 function FirstProjectPage(Language:any) {
-  const refProjekty = useRef<null | HTMLDivElement>(null);
-
-  const handleClickProjekty = () => {
-    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
-  }
-
 
   let obstacles = [
     {
@@ -91,9 +84,9 @@ function FirstProjectPage(Language:any) {
       <div className="stickyIcons">
       <StickyIcons></StickyIcons>
       </div>
-      <NavBarCustom handleClickProjekty={handleClickProjekty} handleClickExpirience={""} handleClickContact={""} language={Language.language}></NavBarCustom>
+      <NavBarCustom></NavBarCustom>
       <div className="Contents">
-        <div ref={refProjekty}>
+        <div>
           <Title {...FirstProjectTitleText}></Title>
           <FirstSection {...FirstProjectTitleText}></FirstSection>
         </div>

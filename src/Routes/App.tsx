@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import '../App.css';
 import PorftolioComponent from '../Components/portfolio';
 import LeftSideProject from '../Components/LeftSideProject';
@@ -32,18 +32,6 @@ function App(Language:any) {
     }, 500)
 }, [location,])
 
-  const refProjekty = useRef<null | HTMLDivElement>(null);
-
-  const handleClickProjekty = () => {
-    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
-  }
-  const handleClickExpirience = () => {
-    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
-  }  
-  const handleClickContact = () => {
-    refProjekty.current?.scrollIntoView({ behavior: 'smooth' });
-  }
-  
   let firstProjectText = { 
       title:"Policy Issuing Automation",
       subTitle:"One of the most important projects in my portfolio",
@@ -81,7 +69,7 @@ function App(Language:any) {
         <div className="stickyIcons">
         <StickyIcons></StickyIcons>
         </div>
-        <NavBarCustom handleClickProjekty={handleClickProjekty} handleClickExpirience={handleClickExpirience} handleClickContact={handleClickContact} language={Language.language}></NavBarCustom>
+        <NavBarCustom></NavBarCustom>
         <div className="Contents">
           <PorftolioComponent language={Language.language}></PorftolioComponent>
           <div id="projects">
