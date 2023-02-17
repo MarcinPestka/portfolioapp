@@ -1,7 +1,8 @@
 
 # My portfolio application
 
-An application that showcases my skills and displays my projects.
+An application that showcases my skills and displays my projects - [Check it out.](https://marcinpestka.netlify.app/en).
+
 
 
 #### Built with:
