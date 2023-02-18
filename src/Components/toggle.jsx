@@ -7,10 +7,7 @@ export default function Toggle() {
     React.useEffect(() => {
       const body = document.body
       const toggle = document.querySelector('.toggle-inner')
-      console.log("test")
       
-      // If dark mode is enabled - adds classes to update dark-mode styling.
-      // Else, removes and styling is as normal.
       if( darkMode === true ) {
         body.classList.add('dark-mode')
         toggle.classList.add('toggle-active')
