@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Icon, Menu } from 'semantic-ui-react';
 import { List } from 'semantic-ui-react';
-import pdf from "../Resources/placeHolder.pdf";
+import pdf from "../Resources/Pestka_Marcin_Cv.pdf";
 
 export default function StickyIcons() {
   return (

@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../Resources/logo_nav.png";
-import pdf from "../Resources/placeHolder.pdf";
+import pdf from "../Resources/Pestka_Marcin_Cv.pdf";
 import { Button, Icon } from 'semantic-ui-react';
 import Toggle from './toggle';
 
